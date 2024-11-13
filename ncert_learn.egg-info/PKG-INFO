@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: ncert_learn
+Version: 2.5.8
+Summary: A module for learning in ncerts cs class 12 python and mysql
+Home-page: https://github.com/hejhdiss/ncert_learn
+Author: Muhammed Shafin P
+Author-email: hejhdiss@example.com
+Project-URL: Bug Tracker, https://github.com/hejhdiss/ncert_learn/issues
+Project-URL: Documentation, https://github.com/hejhdiss/ncert_learn#readme
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mysql-connector-python
+
 # ncert_learn
 
 **ncert_learn** is a Python module designed to help students study for the NCERT Class 12 Computer Science curriculum. It provides various utility functions for Python programming, MySQL database interactions, mathematical operations, sorting algorithms, and much more.
