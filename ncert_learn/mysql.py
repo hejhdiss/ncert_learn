@@ -4,31 +4,94 @@ mydb=''
 error='mysql.connector.errors.DatabaseError,mysql.connector.errors.DataError,mysql.connector.errors.Error,mysql.connector.errors.IntegrityError,mysql.connector.errors.InterfaceError\
 mysql.connector.errors.InternalError,mysql.connector.errors.Mapping,mysql.connector.errors.NotSupportedError,mysql.connector.errors.OperationalError,mysql.connector.errors.OperationalError\
 mysql.connector.errors.ProgrammingError,mysql.connector.errors.Warning'
+def mysqlconnectwithdatabase(database,host='localhost',user='root',password='',port='3306',):
 
-def mysqlconnect(host='localhost',user='root',password='',port='3306'):
 
     """
-    Connect to a MySQL database and returns True on success or False on failure
+    Connects to a MySQL database with the specified database name.
 
     Parameters
     ----------
+    database : str
+        The name of the database to connect to.
     host : str, optional
-        The hostname or IP address of the MySQL server. Defaults to 'localhost'
+        The hostname or IP address of the MySQL server. Defaults to 'localhost'.
     user : str, optional
-        The MySQL username. Defaults to 'root'
+        The MySQL username. Defaults to 'root'.
     password : str, optional
-        The MySQL password. Defaults to ''
+        The MySQL password. Defaults to an empty string ''.
     port : str, optional
-        The port number of the MySQL server. Defaults to '3306'
+        The port number of the MySQL server. Defaults to '3306'.
 
     Returns
     -------
     bool
-        True if the connection was successful, False otherwise
+        True if the connection was successful, False otherwise.
+    """
+
+
+    try:
+        global mydb
+        if mydb!='':
+            mydb.close()
+        mydb=mysql.connector.connect(host=host,user=user,passwd=password,port=port,database=database)
+    except mysql.connector.errors.DatabaseError:
+        return False
+    except mysql.connector.errors.DataError:
+            return False
+    except mysql.connector.errors.Error:
+            return False
+    except mysql.connector.errors.IntegrityError:
+            return False
+    except mysql.connector.errors.InterfaceError:
+            return False
+    except mysql.connector.errors.InternalError:
+            return False
+    except mysql.connector.errors.Mapping:
+            return False
+    except mysql.connector.errors.NotSupportedError:
+            return False
+    except mysql.connector.errors.OperationalError:
+            return False
+    except mysql.connector.errors.ProgrammingError:
+            return False
+    except mysql.connector.errors.Warning:
+            return False
+    except mysql.connector.errors.PoolError:
+            return False
+    except Exception:
+        return False
+    else:
+        return True
+
+def mysqlconnect(host='localhost',user='root',password='',port='3306'):
+
+
+
+    """
+    Connects to a MySQL server without specifying a database.
+
+    Parameters
+    ----------
+    host : str, optional
+        The hostname or IP address of the MySQL server. Defaults to 'localhost'.
+    user : str, optional
+        The MySQL username. Defaults to 'root'.
+    password : str, optional
+        The MySQL password. Defaults to an empty string ''.
+    port : str, optional
+        The port number of the MySQL server. Defaults to '3306'.
+
+    Returns
+    -------
+    bool
+        True if the connection was successful, False otherwise.
     """
 
     try:
         global mydb
+        if mydb!='':
+            mydb.close()
         mydb=mysql.connector.connect(host=host,user=user,passwd=password,port=port)
     except mysql.connector.errors.DatabaseError:
         return False
