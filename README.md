@@ -15,6 +15,8 @@
 ## Bug Fixes
 Added tests
 
+## Changelog
+See [CHANGELOG.md](CHANGELOG.md) for details on version changes.
 
 ## Installation
 
@@ -22,8 +24,3 @@ To install `ncert_learn`, simply use `pip`:
 
 ```bash
 pip install ncert_learn
-
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md) for details on version changes.
-
-
