@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="ncert_learn",                   # Replace with your package name
-    version="2.7.5",                     # Initial version
+    version="3.0.2",                     # Initial version
     author="Muhammed Shafin P",
     author_email="hejhdiss@example.com",
-    description="A module for learning in ncerts cs class 12 python and mysql",
+    description="A Python Module for NCERT Class 12 Computer Science - Learn Python and MySQL with ease!",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     packages=find_packages(),
@@ -23,6 +23,10 @@ setup(
     install_requires=[
         'mysql-connector-python',
         'pytest',
-        'tox',# Add this line to include the MySQL connector
+        'tox',
+        'requests',
+        'psutil',
+        
+        # Add this line to include the MySQL connector
     ],
 )

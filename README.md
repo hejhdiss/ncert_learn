@@ -1,62 +1,61 @@
 # ncert_learn
 
-**ncert_learn** is a Python module designed for NCERT Class 12 Computer Science students. It provides a wide range of utility functions, covering Python programming, MySQL database interactions, mathematical operations, data structures, and various other essential topics to support learning and development.
+**ncert_learn** is a comprehensive Python module designed to support NCERT Class 12 Computer Science students. It offers a wide range of utility functions across various topics, including Python programming, MySQL database interactions, mathematical operations, data structures, system utilities, and more.
 
 ## Key Features
 
-- **Mathematical Functions**: 
-  - Check for prime numbers, Armstrong numbers, strong numbers, Niven numbers, and more.
-  - Functions for calculating Fibonacci numbers, even/odd checks, and other numerical operations.
+### **Mathematical Functions**
+- Prime number check
+- Armstrong, Strong, Niven, Palindrome checks
+- Fibonacci numbers, even/odd checks, and more
 
-- **Data Structures**: 
-  - Stack implementations using lists and dictionaries, with functions to manipulate and display the stack.
+### **Data Structures**
+- Stack operations using lists and dictionaries (push, pop, peek, display)
 
-- **Geometric Calculations**: 
-  - Functions to calculate areas of common geometric shapes such as circles, rectangles, squares, polygons, and triangles.
+### **Geometric Calculations**
+- Area calculations for circles, rectangles, squares, polygons, and triangles
 
-- **Number Conversions**: 
-  - Functions to convert integers to binary, octal, hexadecimal formats, and conversions from binary back to integer.
+### **Number Conversions**
+- Convert integers to binary, octal, hexadecimal, and vice versa
 
-- **MySQL Operations**: 
-  - Connect to MySQL, create and show databases, manage tables, and execute SQL queries directly from Python.
+### **MySQL Operations**
+- Connect to MySQL, manage databases and tables, execute queries
 
-- **Sorting Algorithms**: 
-  - Includes basic sorting algorithms like Bubble Sort and Insertion Sort.
+### **Sorting Algorithms**
+- Implementations of Bubble Sort and Insertion Sort
 
-- **File Handling**: 
-  - Functions to check if a file is a text file, read from or write to text files, and manage file contents.
+### **File Handling**
+- Read, write, and manage text, CSV, and binary files
+- File operations like copying, reading specific lines, and clearing contents
 
-- **Operating System Utilities**: 
-  - Retrieve information about the current operating system, Python interpreter, CPU count, directory listings, and network connectivity.
+### **System Utilities**
+- Fetch information about the operating system, processor, network connectivity, and Python interpreter
 
-- **Package Management**: 
-  - Functions to install Python libraries, including batch installation from a list.
+### **Package Management**
+- Install and manage Python libraries, including bulk installation from a list
 
-- **Time Functions**: 
-  - Access the current time, process time, monotonic time, and thread time.
+### **Time Management**
+- Access current time, process time, monotonic time, and thread time
 
-- **Support and Documentation**: 
-  - Links to support email, feedback email, bug tracker, GitHub repository, and documentation.
+### **XAMPP Utilities**
+- Start/stop XAMPP MySQL and Apache, check PHPMyAdmin access
 
-## New Features in Version 2.7.5
+### **Zip File Handling**
+- Handle ZIP files (list contents, extract, add files)
 
-- **Expanded Mathematical Functions**: More advanced checks for prime, Armstrong, and Niven numbers.
-- **Enhanced File Handling**: Improved text file management, including copying contents from one file to another.
-- **System Utilities**: Added functions to fetch current Python interpreter path, processor details, and check network connectivity.
-- **MySQL Updates**: Improved MySQL database and table management functions.
-- **Time Management**: Added time-based functions like process time and thread time.
+## New Features in Version 3.0.2
+- **MySQL Enhancements**: Improved MySQL database management functions.
+- **File Handling Updates**: Enhanced operations for CSV, text, and binary file management.
+- **System Utilities**: Added support for checking Python interpreter path and processor details.
+- **XAMPP Functions**: Added functions for managing XAMPP MySQL and Apache services, and checking PHPMyAdmin accessibility.
 
 ## Bug Fixes
-- **Error Handling Improvements**: Enhanced error handling for file operations and MySQL interactions.
-
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md) for details on version changes.
-
+- **Error Handling**: Enhanced error handling across file operations and database interactions.
+  
 ## Installation
 
-To install `ncert_learn`, simply use `pip`:
+To install **ncert_learn**, use `pip`:
 
 ```bash
 pip install ncert_learn
-
 
