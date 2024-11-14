@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ncert_learn",                   # Replace with your package name
-    version="2.6.1",                     # Initial version
+    version="2.7.2",                     # Initial version
     author="Muhammed Shafin P",
     author_email="hejhdiss@example.com",
     description="A module for learning in ncerts cs class 12 python and mysql",
@@ -21,6 +21,8 @@ setup(
     ],
     python_requires=">=3.6",
     install_requires=[
-        'mysql-connector-python',  # Add this line to include the MySQL connector
+        'mysql-connector-python',
+        'pytest',
+        'tox',# Add this line to include the MySQL connector
     ],
 )

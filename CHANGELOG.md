@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.2] - 2024-11-15
+- Added pytest And tox
+
+
 ## [2.6.1] - 2024-11-15
 ### Added
 - Documentation Website
