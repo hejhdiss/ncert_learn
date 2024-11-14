@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2.6.0] - 2024-11-XX
+## [2.6.1] - 2024-11-15
+### Added
+- Documentation Website
+
+## [2.6.0] - 2024-11-14
 ### Added
 - Expanded mathematical functions for prime numbers, Armstrong numbers, and Niven numbers.
 - Enhanced text file handling: added functions to copy contents between files, add lines, and read specific lines.

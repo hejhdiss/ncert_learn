@@ -1,21 +1,20 @@
 import os
 def istextfile(file_path):
-
     """
-    Checks if the given file path refers to a text file.
+    Check if a file is a text file.
+    
+    Parameters:
+    file_path (str): Path to the file.
 
-    Parameters
-    ----------
-    file_path : str
-        The path of the file to check.
-
-    Returns
-    -------
-    bool
-        True if the file path refers to a text file, False otherwise.
+    Returns:
+    bool: True if the file is a text file, False otherwise.
     """
-
-    return file_path.endswith('.txt')
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            file.read(1024)  # Read the first 1024 bytes as a test
+        return True
+    except (UnicodeDecodeError, IOError,EOFError):
+        return False
 
 
 def copytextfromonetoanother(a,b):
@@ -200,7 +199,9 @@ def readspecificline( line_number):
             
             # Print the specific line
             return lines[line_number - 1].strip()  # Using line_number - 1 for 0-based indexing
-    except FileNotFoundError:
+    except FileNotFoundError:       
+        return False
+    except EOFError:
         return False
     except IndexError as e:
         return False

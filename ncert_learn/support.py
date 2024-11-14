@@ -56,7 +56,7 @@ def documentationurl():
         The URL of the documentation for this project.
     """
 
-    return "https://github.com/hejhdiss/ncert_learn#readme"
+    return "https://hejhdiss.github.io/ncert_learn-website/"
 def bugtrackerurl():
 
     """

@@ -1,5 +1,5 @@
 # ncert_learn/__init__.py
-__version__ = "2.6.0"
+__version__ = "2.6.1"
 
 from .intfncs import checkprime,factors,len_fibonacci,checkarmstrong,reverse,checkpalindrome,checkstrong,checkniven,prime,armstrong,strong,niven,palindrome,len_armstrong,len_strong,len_niven,len_palindrome,checkeven,checkodd,checkzero,checknegative,checkpositive
 from .stkdict import clearstackdict,createstackdict,pushstackdict,popstackdict,peekstackdict,displaymodestackdict# Import functions
