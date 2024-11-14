@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ncert_learn",                   # Replace with your package name
-    version="2.7.2",                     # Initial version
+    version="2.7.5",                     # Initial version
     author="Muhammed Shafin P",
     author_email="hejhdiss@example.com",
     description="A module for learning in ncerts cs class 12 python and mysql",
