@@ -30,8 +30,7 @@ def check_xampp_files(xampp_path="C:\\xampp"):
     
     logging.info("XAMPP files are present.")
     return True  # All required files are found
-
-def is_process_running(process_name):
+def is_process_running_xampp(process_name):
     """
     Checks if a given process is currently running using psutil.
     
@@ -43,7 +42,21 @@ def is_process_running(process_name):
     """
     for proc in psutil.process_iter(['pid', 'name']):
         if process_name.lower() in proc.info['name'].lower():
-            logging.info(f"{process_name} is already running.")
+            return True
+    return False
+
+def is_process_running(process_name):
+    """
+    Check if a process is running by its name.
+    
+    Args:
+    - process_name (str): The name of the process to check.
+    
+    Returns:
+    - bool: True if the process is running, False otherwise.
+    """
+    for proc in psutil.process_iter(['pid', 'name']):
+        if process_name.lower() in proc.info['name'].lower():
             return True
     return False
 
@@ -54,21 +67,30 @@ def stop_xampp_mysql(xampp_path="C:\\xampp"):
     Args:
     - xampp_path (str): The directory path where XAMPP is installed. Default is "C:\\xampp".
     """
-    if is_process_running("mysqld"):
+    if is_process_running("mysqld.exe"):
         mysql_pid = None
-        for proc in psutil.process_iter(['pid', 'name']):
-            if "mysqld" in proc.info['name'].lower():
-                mysql_pid = proc.info['pid']
-                break
+        # Iterate through processes and find the specific MySQL process used by XAMPP
+        for proc in psutil.process_iter(['pid', 'name', 'exe']):
+            try:
+                # Check if the process is mysqld.exe and belongs to XAMPP directory
+                if "mysqld.exe" in proc.info['name'].lower() and xampp_path.lower() in proc.info['exe'].lower():
+                    mysql_pid = proc.info['pid']
+                    break
+            except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                # Handle process access errors or already terminated processes
+                pass
         
         if mysql_pid:
             try:
                 p = psutil.Process(mysql_pid)
                 p.terminate()
-                logging.info("MySQL server stopped.")
+                logging.info("XAMPP MySQL server stopped successfully.")
             except Exception as e:
-                logging.error(f"Failed to stop MySQL: {e}")
-
+                logging.error(f"Failed to stop XAMPP MySQL server: {e}")
+        else:
+            logging.warning("XAMPP MySQL server process not found.")
+    else:
+        logging.info("XAMPP MySQL service is not running.")
 def stop_xampp_apache(xampp_path="C:\\xampp"):
     """
     Stops the Apache server of XAMPP if it is running.
@@ -76,20 +98,30 @@ def stop_xampp_apache(xampp_path="C:\\xampp"):
     Args:
     - xampp_path (str): The directory path where XAMPP is installed. Default is "C:\\xampp".
     """
-    if is_process_running("httpd"):
+    if is_process_running("httpd.exe"):
         apache_pid = None
-        for proc in psutil.process_iter(['pid', 'name']):
-            if "httpd" in proc.info['name'].lower():
-                apache_pid = proc.info['pid']
-                break
+        # Iterate through processes and find the specific Apache process used by XAMPP
+        for proc in psutil.process_iter(['pid', 'name', 'exe']):
+            try:
+                # Check if the process is httpd.exe and belongs to XAMPP directory
+                if "httpd.exe" in proc.info['name'].lower() and xampp_path.lower() in proc.info['exe'].lower():
+                    apache_pid = proc.info['pid']
+                    break
+            except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                # Handle process access errors or already terminated processes
+                pass
         
         if apache_pid:
             try:
                 p = psutil.Process(apache_pid)
                 p.terminate()
-                logging.info("Apache server stopped.")
+                logging.info("XAMPP Apache server stopped successfully.")
             except Exception as e:
-                logging.error(f"Failed to stop Apache: {e}")
+                logging.error(f"Failed to stop XAMPP Apache server: {e}")
+        else:
+            logging.warning("XAMPP Apache server process not found.")
+    else:
+        logging.info("XAMPP Apache service is not running.")
 
 def start_xampp_mysql(xampp_path="C:\\xampp"):
     """
@@ -138,7 +170,6 @@ def start_xampp_apache(xampp_path="C:\\xampp"):
             return False
     logging.info("Apache is already running.")
     return True  # Apache is already running
-
 def check_phpmyadmin_accessible(url="http://localhost/phpmyadmin"):
     """
     Check if phpMyAdmin is accessible via the provided URL.

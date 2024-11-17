@@ -1,7 +1,25 @@
-## Changelog
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+### [4.2.1] - 2024-11-18
+#### Added
+- **New Nmap Functions**: Added multiple Nmap scanning options for vulnerability assessments.
+- **SQLMap Integration**: Expanded SQL injection testing functionalities.
+- **Enhanced System Utilities**: New features to execute system commands and retrieve system information.
+- **Improved File Handling**: Enhanced operations for various file types.
+- **XAMPP Functions**: Added functions for managing XAMPP MySQL and Apache services, and checking PHPMyAdmin accessibility.
+- **System Utilities**: Added support for checking Python interpreter path and processor details.
+
+#### Changed
+- **General Improvements**: Optimized performance and stability across the module.
+
+#### Fixed
+- **Bug Fixes**: Enhanced error handling across file operations and database interactions.
 
 ### [3.0.2] - 2024-11-14
 #### Added
+- Improved XAMPP MySQL Functions.
 - Improved MySQL database management functions.
 - Enhanced CSV, text, and binary file handling.
 - Added support for checking Python interpreter path and processor details.
@@ -47,4 +65,3 @@
 ### [2.5.6]
 #### Added
 - Added Git support.
-

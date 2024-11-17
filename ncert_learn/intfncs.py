@@ -90,7 +90,7 @@ def checkarmstrong(a):
             s+=r**3
         if s==z:    return True
         else:   return False
-def reverse(a):
+def intreverse(a):
 
     """
     Reverse the digits of a number.

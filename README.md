@@ -43,19 +43,25 @@
 ### **Zip File Handling**
 - Handle ZIP files (list contents, extract, add files)
 
-## New Features in Version 3.0.2
-- **MySQL Enhancements**: Improved MySQL database management functions.
-- **File Handling Updates**: Enhanced operations for CSV, text, and binary file management.
-- **System Utilities**: Added support for checking Python interpreter path and processor details.
-- **XAMPP Functions**: Added functions for managing XAMPP MySQL and Apache services, and checking PHPMyAdmin accessibility.
+### **Nmap Scans**
+- Perform various Nmap scans such as intense scan, quick scan, OS detection, and more
 
-## Bug Fixes
-- **Error Handling**: Enhanced error handling across file operations and database interactions.
-  
+### **SQLMap Scans**
+- Perform SQL injection tests using SQLMap
+
+## New Features in Version 4.2.1
+- **New Nmap Functions**: Added multiple Nmap scanning options for vulnerability assessments
+- **SQLMap Integration**: Expanded SQL injection testing functionalities
+- **Enhanced System Utilities**: New features to execute system commands and retrieve system information
+- **Improved File Handling**: Enhanced operations for various file types
+- **Bug Fixes and Optimizations**: General improvements and optimizations for better performance and stability
+
+## Disclaimer
+This module is intended for educational purposes only. Using this module for any illegal activities is strictly prohibited. The authors and contributors are not responsible for any misuse of the module.
+
 ## Installation
 
 To install **ncert_learn**, use `pip`:
 
 ```bash
 pip install ncert_learn
-
