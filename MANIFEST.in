@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include ncert_learn/sqlmap *
+include CHANGELOG.md

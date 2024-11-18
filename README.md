@@ -49,7 +49,7 @@
 ### **SQLMap Scans**
 - Perform SQL injection tests using SQLMap
 
-## New Features in Version 4.2.1
+## New Features in Version 4.2.3
 - **New Nmap Functions**: Added multiple Nmap scanning options for vulnerability assessments
 - **SQLMap Integration**: Expanded SQL injection testing functionalities
 - **Enhanced System Utilities**: New features to execute system commands and retrieve system information

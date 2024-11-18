@@ -3,9 +3,9 @@ import logging
 import sys
 import os
 import requests
-
+script_dir = os.path.dirname(os.path.abspath(__file__))
 # Add sqlmap folder to Python's system path
-sqlmap_path = os.path.join(os.getcwd(), 'sqlmapts')  # Path to the SQLmap folder
+sqlmap_path = os.path.join(script_dir, 'sqlmap')  # Path to the SQLmap folder
 sys.path.append(sqlmap_path)
 
 # Setup logging to the console
@@ -22,11 +22,14 @@ def sqlmap_scan(url, **kwargs):
             command.append(f'--{key}={value}')
     
     try:
-        subprocess.run(command, check=True, cwd=sqlmap_path)
+        subprocess.run(command,check=True,cwd=sqlmap_path)
         logging.info("SQLmap scan completed successfully.")
     except subprocess.CalledProcessError as e:
         logging.error(f"Error during SQLmap scan: {e}")
-sqlmap_scan("https://example.com",s='43')
+
+
+
+
 # SQLmap API call function (basic)
 def sqlmap_api_call(url, **kwargs):
     """

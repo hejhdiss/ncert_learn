@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 
 ### [4.2.1] - 2024-11-18
+### Changed 
+- **Bug Fixes**: SQLMap Error Handled.
+
+### [4.2.1] - 2024-11-18
 #### Added
 - **New Nmap Functions**: Added multiple Nmap scanning options for vulnerability assessments.
 - **SQLMap Integration**: Expanded SQL injection testing functionalities.
