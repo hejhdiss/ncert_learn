@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ncert_learn",                   # Replace with your package name
-    version="4.5.6",                     # Initial version
+    version="4.5.7",                     # Initial version
     author="Muhammed Shafin P",
     author_email="hejhdiss@example.com",
     description="A Python Module for NCERT Class 12 Computer Science - Learn Python and MySQL with ease!",
@@ -29,7 +29,6 @@ setup(
         'beautifulsoup4',
         'googlesearch-python',
         'python-nmap',
-        'nmap',
         'PyPDF2',
         
         
