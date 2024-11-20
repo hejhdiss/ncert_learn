@@ -162,5 +162,131 @@ def readcsvspecificline(line_number):
 
 
 # Initialize current CSV path variable
+def overwritecsvfile(rows):
+    """
+    Overwrites the contents of the CSV file opened by opencsvfile() function.
+
+    Parameters
+    ----------
+    rows : list
+        A list of rows, where each row is a list of column values.
+
+    Returns
+    -------
+    bool
+        True if the file is overwritten successfully, False otherwise.
+    """
+    global current_csv_path
+
+    if not current_csv_path or not isinstance(rows, list) or not all(isinstance(row, list) for row in rows):
+        return False
+    try:
+        with open(current_csv_path, 'w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerows(rows)
+        return True
+    except (FileNotFoundError, IOError, csv.Error):
+        return False
+import os
+import csv
+
+def csv_file_operations_advanced_mode(folder_path, operation, file_name=None, new_name=None, data=None):
+    """
+    Perform various CSV file operations in a specified folder.
+
+    Parameters
+    ----------
+    folder_path : str
+        Path to the folder where the operations will be performed.
+    operation : str
+        The operation to perform. Supported operations:
+        'create', 'write', 'append', 'read', 'clear', 'delete', 'rename', 'list_files'.
+    file_name : str, optional
+        The file name for the operation.
+    new_name : str, optional
+        New name for the file (used in 'rename').
+    data : list, optional
+        Data for 'write' or 'append' operations (list of rows).
+
+    Returns
+    -------
+    bool or list
+        - For 'read': Returns file content (list of rows) or False on error.
+        - For 'list_files': Returns a list of files in the folder or False on error.
+        - For other operations: Returns True on success, False on failure.
+    """
+    # Check if the folder path is valid
+    if not folder_path or not os.path.isdir(folder_path):
+        return False
+
+    try:
+        file_path = os.path.join(folder_path, file_name) if file_name else None
+
+        # Create a new CSV file
+        if operation == 'create':
+            if not file_name or not file_name.endswith('.csv'):
+                return False
+            with open(file_path, 'w', newline='', encoding='utf-8') as file:
+                pass  # Create an empty CSV file
+            return True
+
+        # Write data to a CSV file (overwrites existing content)
+        elif operation == 'write':
+            if not file_name or not file_name.endswith('.csv') or not isinstance(data, list):
+                return False
+            with open(file_path, 'w', newline='', encoding='utf-8') as file:
+                writer = csv.writer(file)
+                writer.writerows(data)
+            return True
+
+        # Append data to a CSV file
+        elif operation == 'append':
+            if not file_name or not file_name.endswith('.csv') or not isinstance(data, list):
+                return False
+            with open(file_path, 'a', newline='', encoding='utf-8') as file:
+                writer = csv.writer(file)
+                writer.writerows(data)
+            return True
+
+        # Read a CSV file
+        elif operation == 'read':
+            if not file_name or not file_name.endswith('.csv'):
+                return False
+            with open(file_path, 'r', newline='', encoding='utf-8') as file:
+                reader = csv.reader(file)
+                return list(reader)
+
+        # Clear a CSV file
+        elif operation == 'clear':
+            if not file_name or not file_name.endswith('.csv'):
+                return False
+            with open(file_path, 'w', newline='', encoding='utf-8') as file:
+                pass  # Overwrite with an empty CSV file
+            return True
+
+        # Delete a CSV file
+        elif operation == 'delete':
+            if not file_name or not file_name.endswith('.csv'):
+                return False
+            os.remove(file_path)
+            return True
+
+        # Rename a CSV file
+        elif operation == 'rename':
+            if not file_name or not new_name or not file_name.endswith('.csv') or not new_name.endswith('.csv'):
+                return False
+            new_file_path = os.path.join(folder_path, new_name)
+            os.rename(file_path, new_file_path)
+            return True
+
+        # List all CSV files in the folder
+        elif operation == 'list_files':
+            return [f for f in os.listdir(folder_path) if f.endswith('.csv')]
+
+        else:
+            return False  # Unsupported operation
+
+    except (FileNotFoundError, PermissionError, OSError, csv.Error):
+        return False
 
 

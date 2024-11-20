@@ -2,9 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
-### [4.2.1] - 2024-11-18
-### Changed 
-- **Bug Fixes**: SQLMap Error Handled.
+### [4.5.5] - 2024-11-20
+#### Added
+- **Advanced Mathematical Functions**: Added a suite of advanced functions like `adv_gcd`, `adv_lcm`, `adv_prime_factors`, `adv_is_prime`, `adv_modular_exponentiation`, `adv_is_perfect_square`, `adv_fast_fourier_transform`, `adv_hash_string`, `adv_fast_modular_inverse`, `adv_fibonacci`, `adv_sieve_of_eratosthenes`, `adv_modular_square_root`, `adv_random_prime`, `adv_sum_of_squares`, `adv_calculate_modular_power`, `adv_combinations`, `adv_permutations`.
+- **File Operations**: Added functions for advanced file handling such as `get_function_names_from_python_file`, `install_and_setup_nmap`, `check_file_existence`, `create_directory`, `download_file`, `get_file_size`, `get_file_last_modified`, `rename_file`, `delete_file`, `move_file`, `extract_zip`, `compress_files`, `get_url_status`, `fetch_url_content`, `download_files_from_urls`, `get_files_in_directory`, `count_lines_in_file`, `get_current_datetime`, `get_extension`, `get_file_name_without_extension`, `get_file_type`, `move_files_to_directory`.
+- **String Operations**: Added new string operations like `str_reverse`, `str_to_upper`, `str_to_lower`, `str_is_palindrome`, `str_count_occurrences`, `str_is_alpha`, `str_is_digit`, `str_find_substring`, `str_replace_substring`, `str_split_words`, `str_strip_spaces`, `str_startswith`, `str_endswith`, `str_isalnum`, `str_isdigit`, `str_title_case`, `str_concat`, `str_join`.
+- **List Operations**: Added advanced list manipulation functions like `list_append_item`, `list_remove_item`, `list_insert_item`, `list_pop_item`, `list_find_index`, `list_contains_item`, `list_sort`, `list_reverse`, `list_clear`, `list_copy`, `list_extend`, `list_count`, `list_min`, `list_max`, `list_sum`, `list_mean`, `list_unique`, `list_combine`, `list_difference`, `list_intersection`, `list_is_empty`.
+- **Dictionary Operations**: Added enhanced dictionary operations such as `dict_add_key_value`, `dict_remove_key`, `dict_get_value`, `dict_update_value`, `dict_contains_key`, `dict_get_all_keys`, `dict_get_all_values`, `dict_clear`, `dict_copy`, `dict_items`, `dict_pop_item`, `dict_update`, `dict_setdefault`, `dict_fromkeys`, `dict_get_key_with_max_value`, `dict_get_key_with_min_value`.
+- **Advanced System Utilities**: New utilities for system tasks, including advanced file and system interactions.
+- **Advanced MySQL**: Added `mysql_execute_advanced_mode` for optimized database query handling.
+
+#### Changed
+- **Enhanced Performance**: Optimized mathematical and system utility functions for better performance.
+- **File Handling**: Improved file extraction, compression, and download capabilities with error handling and added optimizations.
+- **System Utilities**: Enhanced features for managing system processes, checking file types, and system info retrieval.
+
+#### Fixed
+- **Bug Fixes**: Fixed several issues related to file handling, string operations, and database interactions.
+- **Error Handling**: Improved error handling for file operations, network requests, and system commands.
 
 ### [4.2.1] - 2024-11-18
 #### Added

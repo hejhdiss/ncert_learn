@@ -154,4 +154,125 @@ def readbinaryspecificchunk(offset, size):
 
 
 # Initialize current binary path variable
+def overwritebinaryfile(new_data):
+    """
+    Overwrites the contents of the binary file opened by openbinaryfile() with new data.
+
+    Parameters
+    ----------
+    new_data : bytes
+        The new content to write to the binary file.
+
+    Returns
+    -------
+    bool
+        True if the file is overwritten successfully, False otherwise.
+    """
+    global current_binary_path
+
+    if not current_binary_path or not isinstance(new_data, bytes):
+        return False
+    try:
+        with open(current_binary_path, 'wb') as file:
+            file.write(new_data)
+        return True
+    except (FileNotFoundError, IOError):
+        return False
+import os
+
+def binary_file_operations_advanced_mode(folder_path, operation, file_name=None, new_name=None, data=None):
+    """
+    Perform various binary file operations in a specified folder.
+
+    Parameters
+    ----------
+    folder_path : str
+        Path to the folder where the operations will be performed.
+    operation : str
+        The operation to perform. Supported operations:
+        'create', 'write', 'append', 'read', 'clear', 'delete', 'rename', 'list_files'.
+    file_name : str, optional
+        The file name for the operation.
+    new_name : str, optional
+        New name for the file (used in 'rename').
+    data : bytes, optional
+        Binary data for 'write' or 'append' operations.
+
+    Returns
+    -------
+    bool or bytes or list
+        - For 'read': Returns file content (bytes) or False on error.
+        - For 'list_files': Returns a list of files in the folder or False on error.
+        - For other operations: Returns True on success, False on failure.
+    """
+    # Check if the folder path is valid
+    if not folder_path or not os.path.isdir(folder_path):
+        return False
+
+    try:
+        file_path = os.path.join(folder_path, file_name) if file_name else None
+
+        # Create a new binary file
+        if operation == 'create':
+            if not file_name:
+                return False
+            with open(file_path, 'wb') as file:
+                pass  # Create an empty binary file
+            return True
+
+        # Write binary data to a file
+        elif operation == 'write':
+            if not file_name or data is None or not isinstance(data, bytes):
+                return False
+            with open(file_path, 'wb') as file:
+                file.write(data)
+            return True
+
+        # Append binary data to a file
+        elif operation == 'append':
+            if not file_name or data is None or not isinstance(data, bytes):
+                return False
+            with open(file_path, 'ab') as file:
+                file.write(data)
+            return True
+
+        # Read binary file content
+        elif operation == 'read':
+            if not file_name:
+                return False
+            with open(file_path, 'rb') as file:
+                return file.read()
+
+        # Clear binary file content
+        elif operation == 'clear':
+            if not file_name:
+                return False
+            with open(file_path, 'wb') as file:
+                pass  # Overwrite with an empty binary file
+            return True
+
+        # Delete a binary file
+        elif operation == 'delete':
+            if not file_name:
+                return False
+            os.remove(file_path)
+            return True
+
+        # Rename a binary file
+        elif operation == 'rename':
+            if not file_name or not new_name:
+                return False
+            new_file_path = os.path.join(folder_path, new_name)
+            os.rename(file_path, new_file_path)
+            return True
+
+        # List all files in the folder
+        elif operation == 'list_files':
+            return [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
+
+        else:
+            return False  # Unsupported operation
+
+    except (FileNotFoundError, PermissionError, OSError):
+        return False
 

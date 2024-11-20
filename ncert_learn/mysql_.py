@@ -678,6 +678,129 @@ def mysqlexecutequery(s):
             return False
         else:
             return True
+import mysql.connector
+
+mydb = None
+
+def mysql_execute_advanced_mode(operation, database=None, table=None, query=None, data=None, host='localhost', user='root', password='', port='3306'):
+    """
+    Generalized function to perform various MySQL operations like connect, create DB, show DBs, fetch rows, etc.
+
+    Parameters
+    ----------
+    operation : str
+        The operation to perform. Can be 'connect', 'show_databases', 'create_database', 'show_tables', 
+        'fetch_all', 'create_table', 'insert', 'count_rows', 'execute_query'.
+    database : str, optional
+        The database name, required for operations like 'create_table', 'insert', etc.
+    table : str, optional
+        The table name for operations like 'show_tables', 'fetch_all', 'insert', etc.
+    query : str, optional
+        The SQL query for 'execute_query' operations.
+    data : tuple, optional
+        The data to insert into a table (for 'insert' operations).
+    host : str, optional
+        The hostname or IP address of the MySQL server. Defaults to 'localhost'.
+    user : str, optional
+        The MySQL username. Defaults to 'root'.
+    password : str, optional
+        The MySQL password. Defaults to an empty string ''.
+    port : str, optional
+        The port number of the MySQL server. Defaults to '3306'.
+
+    Returns
+    -------
+    tuple or bool
+        Returns the result of the operation or True/False depending on success or failure.
+    """
+    global mydb
+
+    try:
+        # Connect to MySQL server
+        if operation == 'connect':
+            if mydb and mydb.is_connected():
+                mydb.close()
+            mydb = mysql.connector.connect(host=host, user=user, passwd=password, port=port, database=database)
+            return mydb.is_connected()
+
+        # Show all databases
+        elif operation == 'show_databases':
+            if not mydb or not mydb.is_connected():
+                return False
+            cursor = mydb.cursor()
+            cursor.execute('SHOW DATABASES')
+            return tuple(database[0] for database in cursor.fetchall())
+
+        # Create a new database
+        elif operation == 'create_database':
+            if not mydb or not mydb.is_connected():
+                return False
+            cursor = mydb.cursor()
+            cursor.execute(f'CREATE DATABASE {database}')
+            return True
+
+        # Show all tables in the current database
+        elif operation == 'show_tables':
+            if not mydb or not mydb.is_connected() or not database:
+                return False
+            cursor = mydb.cursor()
+            cursor.execute(f'USE {database}')
+            cursor.execute('SHOW TABLES')
+            return tuple(table[0] for table in cursor.fetchall())
+
+        # Fetch all rows from a table
+        elif operation == 'fetch_all':
+            if not mydb or not mydb.is_connected() or not database or not table:
+                return False
+            cursor = mydb.cursor()
+            cursor.execute(f'USE {database}')
+            cursor.execute(f'SELECT * FROM {table}')
+            return tuple(cursor.fetchall())
+
+        # Create a table in the specified database
+        elif operation == 'create_table':
+            if not mydb or not mydb.is_connected() or not database or not table or not data:
+                return False
+            cursor = mydb.cursor()
+            cursor.execute(f'USE {database}')
+            columns = ', '.join([f'{field} {dtype}' for field, dtype in zip(data[0], data[1])])
+            cursor.execute(f'CREATE TABLE {table} ({columns})')
+            return True
+
+        # Insert data into a table
+        elif operation == 'insert':
+            if not mydb or not mydb.is_connected() or not database or not table or not data:
+                return False
+            cursor = mydb.cursor()
+            cursor.execute(f'USE {database}')
+            placeholders = ', '.join(['%s'] * len(data))
+            cursor.execute(f'INSERT INTO {table} VALUES ({placeholders})', data)
+            mydb.commit()
+            return True
+
+        # Count the number of rows in a table
+        elif operation == 'count_rows':
+            if not mydb or not mydb.is_connected() or not database or not table:
+                return False
+            cursor = mydb.cursor()
+            cursor.execute(f'USE {database}')
+            cursor.execute(f'SELECT COUNT(*) FROM {table}')
+            return cursor.fetchone()[0]
+
+        # Execute a custom SQL query
+        elif operation == 'execute_query':
+            if not mydb or not mydb.is_connected() or not query:
+                return False
+            cursor = mydb.cursor()
+            cursor.execute(query)
+            return cursor.fetchall()
+
+    except mysql.connector.Error as err:
+ 
+        return False
+    except Exception as ex:
+
+        return False
 
 
 

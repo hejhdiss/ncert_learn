@@ -207,5 +207,135 @@ def readspecificline( line_number):
         return False
     except Exception as e:
         return False
+def overwritetextfile(new_content):
+    """
+    Overwrites the contents of the currently opened text file with new content.
+
+    Parameters
+    ----------
+    new_content : str
+        The new content to write to the file.
+
+    Returns
+    -------
+    bool
+        True if the operation is successful, False otherwise.
+    """
+    global path
+
+    if not path or not isinstance(new_content, str):
+        return False
+
+    try:
+        with open(path, 'w', encoding='utf-8') as file:
+            file.write(new_content)
+        return True
+    except (FileNotFoundError, IOError, Exception):
+        return False
+import os
+
+def text_file_operations_advanced_mode(folder_path, operation, file_name=None, new_name=None, data=None):
+    """
+    Perform various text file operations in a specified folder.
+
+    Parameters
+    ----------
+    folder_path : str
+        Path to the folder where the operations will be performed.
+    operation : str
+        The operation to perform. Supported operations:
+        'create', 'write', 'append', 'read', 'clear', 'delete', 'rename', 'list_files', 'overwrite'.
+    file_name : str, optional
+        The file name for the operation.
+    new_name : str, optional
+        New name for the file (used in 'rename').
+    data : str, optional
+        Text data for 'write', 'append', or 'overwrite' operations.
+
+    Returns
+    -------
+    bool or str or list
+        - For 'read': Returns file content (str) or False on error.
+        - For 'list_files': Returns a list of files in the folder or False on error.
+        - For other operations: Returns True on success, False on failure.
+    """
+    # Validate folder path
+    if not folder_path or not os.path.isdir(folder_path):
+        return False
+
+    try:
+        file_path = os.path.join(folder_path, file_name) if file_name else None
+
+        # Create a new text file
+        if operation == 'create':
+            if not file_name:
+                return False
+            with open(file_path, 'w', encoding='utf-8') as file:
+                pass  # Create an empty text file
+            return True
+
+        # Write text data to a file
+        elif operation == 'write':
+            if not file_name or data is None or not isinstance(data, str):
+                return False
+            with open(file_path, 'w', encoding='utf-8') as file:
+                file.write(data)
+            return True
+
+        # Append text data to a file
+        elif operation == 'append':
+            if not file_name or data is None or not isinstance(data, str):
+                return False
+            with open(file_path, 'a', encoding='utf-8') as file:
+                file.write(data)
+            return True
+
+        # Overwrite the file with new content
+        elif operation == 'overwrite':
+            if not file_name or data is None or not isinstance(data, str):
+                return False
+            with open(file_path, 'w', encoding='utf-8') as file:
+                file.write(data)
+            return True
+
+        # Read text file content
+        elif operation == 'read':
+            if not file_name:
+                return False
+            with open(file_path, 'r', encoding='utf-8') as file:
+                return file.read()
+
+        # Clear text file content
+        elif operation == 'clear':
+            if not file_name:
+                return False
+            with open(file_path, 'w', encoding='utf-8') as file:
+                pass  # Overwrite with an empty file
+            return True
+
+        # Delete a text file
+        elif operation == 'delete':
+            if not file_name:
+                return False
+            os.remove(file_path)
+            return True
+
+        # Rename a text file
+        elif operation == 'rename':
+            if not file_name or not new_name:
+                return False
+            new_file_path = os.path.join(folder_path, new_name)
+            os.rename(file_path, new_file_path)
+            return True
+
+        # List all files in the folder
+        elif operation == 'list_files':
+            return [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
+
+        else:
+            return False  # Unsupported operation
+
+    except (FileNotFoundError, IOError, OSError):
+        return False
 
     
