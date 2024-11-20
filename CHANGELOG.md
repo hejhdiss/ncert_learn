@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-### [4.5.5] - 2024-11-20
+### [4.5.6] - 2024-11-20
 #### Added
 - **Advanced Mathematical Functions**: Added a suite of advanced functions like `adv_gcd`, `adv_lcm`, `adv_prime_factors`, `adv_is_prime`, `adv_modular_exponentiation`, `adv_is_perfect_square`, `adv_fast_fourier_transform`, `adv_hash_string`, `adv_fast_modular_inverse`, `adv_fibonacci`, `adv_sieve_of_eratosthenes`, `adv_modular_square_root`, `adv_random_prime`, `adv_sum_of_squares`, `adv_calculate_modular_power`, `adv_combinations`, `adv_permutations`.
 - **File Operations**: Added functions for advanced file handling such as `get_function_names_from_python_file`, `install_and_setup_nmap`, `check_file_existence`, `create_directory`, `download_file`, `get_file_size`, `get_file_last_modified`, `rename_file`, `delete_file`, `move_file`, `extract_zip`, `compress_files`, `get_url_status`, `fetch_url_content`, `download_files_from_urls`, `get_files_in_directory`, `count_lines_in_file`, `get_current_datetime`, `get_extension`, `get_file_name_without_extension`, `get_file_type`, `move_files_to_directory`.

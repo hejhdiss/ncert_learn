@@ -72,7 +72,7 @@
 - Functions for advanced number theory (e.g., GCD, LCM, Fibonacci)
 - Optimized algorithms for cryptographic and mathematical operations
 
-## New Features in Version 4.5.5
+## New Features in Version 4.5.6
 - **New Functionality**: A suite of new functions for enhanced file, string, list, and dictionary operations
 - **Advanced Mathematical Functions**: Added several new mathematical functions such as `adv_gcd`, `adv_lcm`, `adv_prime_factors`, `adv_is_prime`, and more
 - **Advanced File Handling**: Added operations for advanced file management (e.g., renaming, moving, compressing files, and extracting ZIP)
