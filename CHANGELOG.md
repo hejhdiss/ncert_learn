@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+### [4.5.11] - 2024-11-21
+#### Fixed
+-**Avoided Automatic Checking**:Automatic Checking Of Engine On Startup Is Closed.
+
 ### [4.5.7] - 2024-11-20
 #### Added
 - **Advanced Mathematical Functions**: Added a suite of advanced functions like `adv_gcd`, `adv_lcm`, `adv_prime_factors`, `adv_is_prime`, `adv_modular_exponentiation`, `adv_is_perfect_square`, `adv_fast_fourier_transform`, `adv_hash_string`, `adv_fast_modular_inverse`, `adv_fibonacci`, `adv_sieve_of_eratosthenes`, `adv_modular_square_root`, `adv_random_prime`, `adv_sum_of_squares`, `adv_calculate_modular_power`, `adv_combinations`, `adv_permutations`.

@@ -80,6 +80,10 @@
 - **Advanced System Utilities**: More functions to handle system tasks and fetch system information efficiently
 - **Bug Fixes and Optimizations**: General improvements to enhance performance and stability
 
+## Recommendation: Upgrade to Version 4.5.11
+
+We recommend downloading **version 4.5.11** as it includes important bug fixes and improvements that enhance performance and stability. Make sure to update to this version for a better experience.
+
 ## Disclaimer
 This module is intended for educational purposes only. Using this module for any illegal activities is strictly prohibited. The authors and contributors are not responsible for any misuse of the module.
 

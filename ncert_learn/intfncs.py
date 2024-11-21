@@ -330,7 +330,6 @@ def palindrome(z):
         else:
             return m
 def len_prime(yt):
-
     """
     Generate the first yt prime numbers.
 
@@ -341,28 +340,24 @@ def len_prime(yt):
         tuple or int: A tuple containing the first yt prime numbers,
         or -1 if no prime numbers are found.
     """
-    if not('int' in str(type(a))):
+    if not isinstance(yt, int):
         return False
     else:
-        m=()
-        k=2
-        while True:
-            a=k
-            c=0
-            for i in range(1,a+1):
-                if a%i==0:
-                    c+=1
-            if c==2:
-                m+=(a,)
-            else:
-                pass
-            k+=1
-            if len(m)==yt:
-                break
-        if m==():
-            return -1
-        else:
+        m = ()
+        k = 2
+        while len(m) < yt:
+            c = 0
+            for i in range(1, k+1):
+                if k % i == 0:
+                    c += 1
+            if c == 2:
+                m += (k,)
+            k += 1
+        if m:
             return m
+        else:
+            return -1
+
 def len_armstrong(yt):
 
     """
@@ -377,7 +372,7 @@ def len_armstrong(yt):
         tuple or int: A tuple containing the first yt Armstrong numbers,
         or -1 if no Armstrong numbers are found.
     """
-    if not('int' in str(type(a))):
+    if not('int' in str(type(yt))):
         return False
     else:
         m=()
@@ -413,7 +408,7 @@ def len_strong(yt):
         tuple or int: A tuple containing the first yt strong numbers,
         or -1 if no strong numbers are found.
     """
-    if not('int' in str(type(a))):
+    if not('int' in str(type(yt))):
         return False
     else:
         m=()
@@ -447,7 +442,7 @@ def len_niven(yt):
         tuple or int: A tuple containing the first yt Niven numbers,
         or -1 if no Niven numbers are found.
     """
-    if not('int' in str(type(a))):
+    if not('int' in str(type(yt))):
         return False
     else:
         m=()
@@ -483,7 +478,7 @@ def len_palindrome(yt):
         tuple or int: A tuple containing the first yt palindrome numbers,
         or -1 if no palindrome numbers are found.
     """   
-    if not('int' in str(type(a))):
+    if not('int' in str(type(yt))):
         return False
     else:
         m=()

@@ -269,5 +269,4 @@ def test_engine_functions():
     assert np.allclose(model_weights, loaded_weights), "Save/Load Model Failed!"
     print("Save/Load Model Passed!")
 
-# Call tests
-test_engine_functions()
+
