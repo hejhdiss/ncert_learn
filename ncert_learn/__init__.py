@@ -1,5 +1,5 @@
 # ncert_learn/__init__.py
-__version__ = "4.5.7"
+__version__ = "4.5.9"
 
 from .intfncs import checkprime,factors,len_fibonacci,checkarmstrong,intreverse,checkpalindrome,checkstrong,checkniven,prime,armstrong,strong,niven,palindrome,len_armstrong,len_strong,len_niven,len_palindrome,checkeven,checkodd,checkzero,checknegative,checkpositive
 from .stkdict import clearstackdict,createstackdict,pushstackdict,popstackdict,peekstackdict,displaymodestackdict# Import functions
@@ -94,7 +94,7 @@ from .getfunctions import get_function_names_from_python_file
 from .engine import engine_save_model,engine_load_model,engine_tensor_add,engine_tensor_dot,engine_sigmoid_activation,engine_dense_layer,engine_sgd_optimizer,engine_mse_loss,test_engine_functions
 from .pdfextract import extract_text_from_pdf,save_text_to_file
 from .lstfncs import list_append_item, list_remove_item, list_insert_item, list_pop_item, list_find_index, list_contains_item, list_sort, list_reverse, list_clear, list_copy, list_extend, list_count, list_min, list_max, list_sum, list_mean, list_unique, list_combine, list_difference, list_intersection, list_is_empty
-from .strfncs import str_reverse, str_to_upper, str_to_lower, str_is_palindrome, str_count_occurrences, str_is_alpha, str_is_digit, str_find_substring, str_replace_substring, str_split_words, str_strip_spaces, str_startswith, str_endswith, str_isalnum, str_isdigit, str_title_case, str_concat, str_join
+from .strfncs import str_reverse, str_to_upper, str_to_lower, str_is_palindrome, str_count_occurrences, str_is_alpha, str_is_digit, str_find_substring, str_replace_substring, str_split_words, str_strip_spaces, str_startswith, str_endswith, str_isalnum, str_title_case, str_concat, str_join
 from .dictfncs import dict_add_key_value, dict_remove_key, dict_get_value, dict_update_value, dict_contains_key, dict_get_all_keys, dict_get_all_values, dict_clear, dict_copy, dict_items, dict_pop_item, dict_update, dict_setdefault, dict_fromkeys, dict_get_key_with_max_value, dict_get_key_with_min_value
 from .advancedmodeforpg import adv_gcd, adv_lcm, adv_prime_factors, adv_is_prime, adv_modular_exponentiation, adv_is_perfect_square, adv_fast_fourier_transform, adv_hash_string, adv_fast_modular_inverse, adv_fibonacci, adv_sieve_of_eratosthenes, adv_modular_square_root, adv_random_prime, adv_sum_of_squares, adv_calculate_modular_power, adv_combinations, adv_permutations
 # Optional: List functions to include in 'import *' cal
@@ -118,7 +118,7 @@ __all__ = ['mysqlconnectwithdatabase','exampleusage','checkprime','factors','len
            'engine_save_model','engine_load_model','engine_tensor_add','engine_tensor_dot','engine_sigmoid_activation','engine_dense_layer','engine_sgd_optimizer','engine_mse_loss','test_engine_functions',
            'overwritetextfile','text_file_operations_advanced_mode','overwritebinaryfile','binary_file_operations_advanced_mode','overwritecsvfile','csv_file_operations_advanced_mode',
            'extract_text_from_pdf','save_text_to_file','list_append_item', 'list_remove_item', 'list_insert_item', 'list_pop_item', 'list_find_index', 'list_contains_item', 'list_sort', 'list_reverse', 'list_clear', 'list_copy', 'list_extend', 'list_count', 'list_min', 'list_max', 'list_sum', 'list_mean', 'list_unique', 'list_combine', 'list_difference', 'list_intersection', 'list_is_empty',
-           'str_reverse', 'str_to_upper', 'str_to_lower', 'str_is_palindrome', 'str_count_occurrences', 'str_is_alpha', 'str_is_digit', 'str_find_substring', 'str_replace_substring', 'str_split_words', 'str_strip_spaces', 'str_startswith', 'str_endswith', 'str_isalnum', 'str_isdigit', 'str_title_case', 'str_concat, str_join','str_concat', 'str_join',
+           'str_reverse', 'str_to_upper', 'str_to_lower', 'str_is_palindrome', 'str_count_occurrences', 'str_is_alpha', 'str_is_digit', 'str_find_substring', 'str_replace_substring', 'str_split_words', 'str_strip_spaces', 'str_startswith', 'str_endswith', 'str_isalnum', 'str_title_case', 'str_concat, str_join','str_concat', 'str_join',
            'dict_add_key_value', 'dict_remove_key', 'dict_get_value', 'dict_update_value', 'dict_contains_key', 'dict_get_all_keys', 'dict_get_all_values', 'dict_clear', 'dict_copy', 'dict_items', 'dict_pop_item', 'dict_update', 'dict_setdefault', 'dict_fromkeys', 'dict_get_key_with_max_value', 'dict_get_key_with_min_value',
            'adv_gcd', 'adv_lcm', 'adv_prime_factors', 'adv_is_prime', 'adv_modular_exponentiation', 'adv_is_perfect_square', 'adv_fast_fourier_transform', 'adv_hash_string', 'adv_fast_modular_inverse', 'adv_fibonacci', 'adv_sieve_of_eratosthenes', 'adv_modular_square_root', 'adv_random_prime', 'adv_sum_of_squares', 'adv_calculate_modular_power', 'adv_combinations', 'adv_permutations'
            
