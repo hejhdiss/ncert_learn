@@ -9,6 +9,8 @@
 - Armstrong, Strong, Niven, Palindrome checks
 - Fibonacci numbers, even/odd checks, and more
 - Advanced functions like GCD, LCM, prime factorization, modular exponentiation, and fast Fourier transform
+- **New Advanced Mathematical Functions**: 
+  - `adv_gcd`, `adv_lcm`, `adv_prime_factors`, `adv_is_prime`
 
 ### **Data Structures**
 - Stack operations using lists and dictionaries (push, pop, peek, display)
@@ -72,17 +74,21 @@
 - Functions for advanced number theory (e.g., GCD, LCM, Fibonacci)
 - Optimized algorithms for cryptographic and mathematical operations
 
-## New Features in Version 4.5.7
-- **New Functionality**: A suite of new functions for enhanced file, string, list, and dictionary operations
-- **Advanced Mathematical Functions**: Added several new mathematical functions such as `adv_gcd`, `adv_lcm`, `adv_prime_factors`, `adv_is_prime`, and more
+## New Features in Version 4.6.0
+- **New Functionality**: A suite of new functions for enhanced mathematical, plotting, and numerical operations.
+  - **Numerical Functions**: 
+    - `numerical_add`, `numerical_subtract`, `numerical_multiply`, `numerical_divide`, `numerical_zeros`, `numerical_ones`, `numerical_reshape`, `numerical_dot`, `numerical_inv`, `numerical_det`, `numerical_randint`, `numerical_randn`, `numerical_mean`, `numerical_median`, `numerical_variance`, `numerical_std`, `numerical_string_length`, `numerical_string_upper`, `numerical_string_lower`, `numerical_svd`
+  - **Plotting Functions**: 
+    - `plot_histogram`, `plot_line`, `plot_scatter`, `plot_bar`, `plot_pie`, `plot_box`, `plot_heatmap`, `plot_stacked_bar`, `plot_area`, `plot_violin`, `plot_pair`, `plot_3d`, `plot_subplots`, `plot_hexbin`, `plot_contour`
+  
 - **Advanced File Handling**: Added operations for advanced file management (e.g., renaming, moving, compressing files, and extracting ZIP)
 - **Enhanced MySQL Operations**: Introduced `mysql_execute_advanced_mode` for optimized database queries
 - **Advanced System Utilities**: More functions to handle system tasks and fetch system information efficiently
 - **Bug Fixes and Optimizations**: General improvements to enhance performance and stability
 
-## Recommendation: Upgrade to Version 4.5.12
+## Recommendation: Upgrade to Version 4.6.0
 
-We recommend downloading **version 4.5.12** as it includes important bug fixes and improvements that enhance performance and stability. Make sure to update to this version for a better experience.
+We recommend downloading **version 4.6.0** as it includes important bug fixes and improvements that enhance performance and stability. Make sure to update to this version for a better experience.
 
 ## Disclaimer
 This module is intended for educational purposes only. Using this module for any illegal activities is strictly prohibited. The authors and contributors are not responsible for any misuse of the module.
