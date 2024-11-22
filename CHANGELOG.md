@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ### [4.5.11] - 2024-11-21
 #### Fixed
--**Avoided Automatic Checking**:Automatic Checking Of Engine On Startup Is Closed.
+-**Avoided Dependecy Issue**: Numpy Dependecy issue Resolved.
+
+### [4.5.11] - 2024-11-21
+#### Fixed
+-**Avoided Automatic Checking**: Automatic Checking Of Engine On Startup Is Closed.
 
 ### [4.5.7] - 2024-11-20
 #### Added
