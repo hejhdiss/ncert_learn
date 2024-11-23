@@ -2,7 +2,60 @@
 
 All notable changes to this project will be documented in this file.
 
-## Changelog for `ncert_learn` v4.9.0
+## [5.0.1] - 2024-11-23
+
+### Added
+- **Set Operations:**
+  - `set_create`: Creates a new set.
+  - `set_add`: Adds an element to the set.
+  - `set_remove`: Removes an element from the set.
+  - `set_discard`: Removes an element from the set if it exists, without throwing an error.
+  - `set_is_member`: Checks if an element is present in the set.
+  - `set_size`: Returns the size of the set.
+  - `set_clear`: Clears all elements in the set.
+
+- **Queue Operations:**
+  - `queue_create`: Creates a new queue.
+  - `queue_enqueue`: Adds an element to the end of the queue.
+  - `queue_dequeue`: Removes and returns the element from the front of the queue.
+  - `queue_peek`: Returns the element at the front of the queue without removing it.
+  - `queue_is_empty`: Checks if the queue is empty.
+  - `queue_size`: Returns the size of the queue.
+  - `queue_clear`: Clears all elements in the queue.
+
+- **Dictionary Operations:**
+  - `dict_create`: Creates a new dictionary.
+  - `dict_add`: Adds a key-value pair to the dictionary.
+  - `dict_get`: Retrieves the value for a given key.
+  - `dict_remove`: Removes a key-value pair from the dictionary.
+  - `dict_key_exists`: Checks if a key exists in the dictionary.
+  - `dict_get_keys`: Returns all keys in the dictionary.
+  - `dict_get_values`: Returns all values in the dictionary.
+  - `dict_size`: Returns the size of the dictionary.
+  - `dict_clear`: Clears all key-value pairs in the dictionary.
+
+- **Tree Operations:**
+  - `tree_insert`: Inserts a node into the tree.
+  - `tree_inorder`: Performs an inorder traversal of the tree.
+  - `tree_search`: Searches for a node in the tree.
+  - `tree_minimum`: Finds the minimum value in the tree.
+  - `tree_maximum`: Finds the maximum value in the tree.
+  - `tree_size`: Returns the number of nodes in the tree.
+  - `tree_height`: Returns the height of the tree.
+  - `tree_level_order`: Performs a level order traversal of the tree.
+  - `tree_postorder`: Performs a postorder traversal of the tree.
+  - `tree_preorder`: Performs a preorder traversal of the tree.
+  - `tree_breadth_first`: Performs a breadth-first search in the tree.
+  - `tree_depth_first`: Performs a depth-first search in the tree.
+  - `tree_delete`: Deletes a node from the tree.
+
+### Changed
+- Improved error handling for all new functions to ensure graceful failure and informative messages for invalid inputs or operations.
+
+### Fixed
+- Optimized existing code for better performance in data structure operations.
+
+## [4.9.0] - 2024-11-23
 
 ### Added
 
