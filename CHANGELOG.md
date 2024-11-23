@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version [5.2.3] - 2024-11-23
+### Fixed
+- **Bug Fixes**: Fixed File Not Found In Miner.
+
 ## Version [5.2.1] - 2024-11-23
 ### Fixed
 - **Bug Fixes**: Fixed Automatic Starting Of Miner ON Importing Module.
