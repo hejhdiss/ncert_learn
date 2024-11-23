@@ -1,6 +1,30 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+### [4.8.0] - 2024-11-23
+#### Added
+- **New Cryptographic Functions**:
+  - **Encoding/Decoding Methods**:
+    - `encode_ascii`, `decode_ascii`, `encode_utf8`, `decode_utf8`, `encode_utf16`, `decode_utf16`, `encode_utf32`, `decode_utf32`
+    - `encode_base64`, `decode_base64`, `encode_hex`, `decode_hex`, `encode_url`, `decode_url`, `encode_html`, `decode_html`
+    - `encode_morse`, `decode_morse`, `encode_binary`, `decode_binary`
+    - `encode_zlib`, `decode_zlib`, `encode_gzip`, `decode_gzip`, `encode_base58`, `decode_base58`
+    - `encode_deflate`, `decode_deflate`, `encode_brotli`, `decode_brotli`, `encode_lzma`, `decode_lzma`
+    - `encode_rot13`, `decode_rot13`, `encode_base32`, `decode_base32`, `encode_base16`, `decode_base16`
+    - `encode_caesar_cipher`, `decode_caesar_cipher`, `encode_url_safe_base64`, `decode_url_safe_base64`
+  
+- **New Functionality for Extracting Functions from Python Files**:
+  - `get_function_names_from_python_file_list`: Extracts function names from a Python file and returns them as a list.
+  - `get_function_names_from_python_file_str`: Extracts function names from a string of Python code and returns them as a list.
+
+### [4.7.0] - 2024-11-23  
+#### Added  
+- **API Functions**:  
+  - `api_create_item`, `api_read_item`, `api_update_item`, `api_delete_item`  
+  - `api_create_user`, `api_read_user`, `api_delete_user`  
+  - `api_authenticate_user`, `api_upload_file`, `api_download_file`  
+  - `api_bulk_insert_items`, `api_filter_items`, `api_export_data`  
+  - `api_user_interface`  
 
 ### [4.6.0] - 2024-11-22
 #### Added
