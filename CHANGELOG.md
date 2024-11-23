@@ -1,6 +1,104 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
+## Changelog for `ncert_learn` v4.9.0
+
+### Added
+
+#### Mathematical Functions
+- **trigonometric_sine**: Computes the sine of a given angle.
+- **trigonometric_cosine**: Computes the cosine of a given angle.
+- **trigonometric_tangent**: Computes the tangent of a given angle.
+- **trigonometric_inverse_sine**: Computes the inverse sine (arcsin) of a given value.
+- **trigonometric_inverse_cosine**: Computes the inverse cosine (arccos) of a given value.
+- **trigonometric_inverse_tangent**: Computes the inverse tangent (arctan) of a given value.
+- **quadratic_roots**: Solves a quadratic equation \(ax^2 + bx + c = 0\) and returns its roots.
+- **power**: Computes the power of a number raised to the given exponent.
+- **logarithm**: Computes the logarithm of a number with a given base.
+- **factorial**: Computes the factorial of a number.
+- **gcd**: Computes the greatest common divisor of two numbers.
+- **lcm**: Computes the least common multiple of two numbers.
+- **binomial_coefficient**: Computes the binomial coefficient (n choose k).
+- **derivative**: Computes the derivative of a given function.
+- **definite_integral**: Computes the definite integral of a given function.
+- **series_sum**: Computes the sum of a series.
+- **area_of_circle**: Computes the area of a circle given its radius.
+- **area_of_triangle**: Computes the area of a triangle given its base and height.
+- **area_of_rectangle**: Computes the area of a rectangle given its length and width.
+- **volume_of_sphere**: Computes the volume of a sphere given its radius.
+- **volume_of_cylinder**: Computes the volume of a cylinder given its radius and height.
+
+#### Number Theory Functions
+- **is_prime**: Checks if a number is prime.
+- **prime_factors**: Computes the prime factors of a number.
+- **fibonacci**: Computes the Fibonacci sequence up to a given number.
+- **perfect_number**: Checks if a number is a perfect number.
+- **is_palindrome**: Checks if a number is a palindrome.
+- **sum_of_divisors**: Computes the sum of divisors of a given number.
+- **is_abundant**: Checks if a number is an abundant number.
+- **is_deficient**: Checks if a number is a deficient number.
+- **triangular_number**: Checks if a number is a triangular number.
+- **is_square_number**: Checks if a number is a perfect square.
+- **mean**: Computes the mean (average) of a list of numbers.
+- **median**: Computes the median of a list of numbers.
+- **variance**: Computes the variance of a list of numbers.
+- **standard_deviation**: Computes the standard deviation of a list of numbers.
+- **harmonic_mean**: Computes the harmonic mean of a list of numbers.
+
+#### Trigonometric Functions
+- **trigonometric_secant**: Computes the secant of a given angle.
+- **trigonometric_cosecant**: Computes the cosecant of a given angle.
+- **trigonometric_cotangent**: Computes the cotangent of a given angle.
+- **trigonometric_inverse_secant**: Computes the inverse secant (arcsec) of a given value.
+- **trigonometric_inverse_cosecant**: Computes the inverse cosecant (arccsc) of a given value.
+- **trigonometric_inverse_cotangent**: Computes the inverse cotangent (arccot) of a given value.
+
+#### Advanced Mathematical Functions
+- **cube_root**: Computes the cube root of a number.
+- **nth_root**: Computes the nth root of a number.
+- **exponential**: Computes the exponential of a number.
+- **mod_inverse**: Computes the modular inverse of a number.
+- **absolute**: Computes the absolute value of a number.
+- **round_to_decimal**: Rounds a number to a specified number of decimal places.
+- **ceil**: Computes the ceiling value of a number (rounds up).
+- **floor**: Computes the floor value of a number (rounds down).
+
+#### Data Science Functions
+- **handle_missing_values**: Handles missing values in a dataset.
+- **normalize_data**: Normalizes the dataset.
+- **standardize_data**: Standardizes the dataset.
+- **encode_categorical_columns**: Encodes categorical columns in a dataset.
+- **split_dataset**: Splits a dataset into training and testing sets.
+- **linear_regression_model**: Creates a linear regression model.
+- **evaluate_regression_model**: Evaluates a regression model's performance.
+- **evaluate_classification_model**: Evaluates a classification model's performance.
+- **shuffle_data**: Shuffles the data.
+- **cross_validation**: Performs cross-validation for model evaluation.
+- **feature_importance**: Computes the feature importance of a model.
+- **plot_feature_importance**: Plots the feature importance of a model.
+- **save_model**: Saves a trained model to a file.
+- **load_model**: Loads a trained model from a file.
+
+#### Machine Learning Functions
+- **plot_data**: Plots a given dataset.
+- **plot_decision_boundary**: Plots the decision boundary of a classifier.
+- **polynomial_features**: Generates polynomial features for a dataset.
+- **logistic_regression_model**: Creates a logistic regression model.
+- **decision_tree_model**: Creates a decision tree model.
+- **random_forest_model**: Creates a random forest model.
+- **mean_squared_error**: Computes the mean squared error of a model.
+- **train_test_split**: Splits data into training and testing sets.
+- **accuracy_score**: Computes the accuracy score of a classification model.
+
+#### Algorithm Functions
+- **binary_search**: Performs binary search on a sorted list.
+- **linear_search**: Performs linear search on a list.
+- **jump_search**: Performs jump search on a sorted list.
+- **exponential_search**: Performs exponential search on a sorted list.
+- **ternary_search**: Performs ternary search on a sorted list.
+- **interpolation_search**: Performs interpolation search on a sorted list.
+
 ### [4.8.0] - 2024-11-23
 #### Added
 - **New Cryptographic Functions**:

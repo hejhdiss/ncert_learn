@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ncert_learn",                   # Replace with your package name
-    version="4.8.0",                     # Initial version
+    version="4.9.0",                     # Initial version
     author="Muhammed Shafin P",
     author_email="hejhdiss@example.com",
     description="A Python Module for NCERT Class 12 Computer Science - Learn Python and MySQL with ease!",
@@ -34,6 +34,14 @@ setup(
         'numpy',
         'matplotlib',
         'brotli',
+        'autopep8',
+        'pylint',
+        'pandas',
+        'scikit-learn',
+        'joblib', 
+
+        
+
         
         
         # Add this line to include the MySQL connector
