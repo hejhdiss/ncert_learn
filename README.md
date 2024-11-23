@@ -2,6 +2,8 @@
 
 `ncert_learn` is a comprehensive Python module designed to support NCERT Class 12 Computer Science students. It offers a wide range of utility functions across various topics, including Python programming, MySQL database interactions, mathematical operations, data structures, network security, and more.
 
+---
+
 ## Key Features
 
 ### Mathematical Functions
@@ -65,12 +67,6 @@
 ### Code Quality Tools
 - **Format and lint Python code**: `format_code`, `lint_code`, `check_code_quality`.
 
----
-
-## Version [5.0.1] - 2024-11-23
-
-### Added
-
 #### Set Operations
 - **set_create**: Creates a new set.
 - **set_add**: Adds an element to the set.
@@ -117,6 +113,14 @@
 
 ---
 
+## Version [5.1.1] - 2024-11-23
+
+### Added
+**Variety Types Of Trees**: Added Functions To Handle Various Types Of Tree Handling In Classes.
+- **Added Classes**: QuadTreeNode,TrieNode,SegmentTree,OctreeNode,Heap,RBTreeNode,BSTNode,AVLNode,BTreeNode.
+- **Some Functions OutSide Class**: `bst_insert`,`bst_search`,`bst_inorder`,`avl_insert`,`avl_get_height`,`avl_get_balance`,`avl_left_rotate`,`avl_right_rotate`,`rb_insert`,`rb_insert_fixup`,`rb_left_rotate`,`rb_right_rotate`,`btree_insert`,`btree_insert_non_full`,`btree_split`,`trie_insert`.
+
+
 ### Network Security & Utilities
 
 This module includes functionalities for SQL injection testing, network scanning, and local service management. It integrates tools such as **sqlmap**, **nmap**, and **XAMPP** to help users perform security-related tasks and manage services effectively.
@@ -147,7 +151,7 @@ All notable changes to this project are documented in the [Changelog](https://gi
 
 ## Recommendation
 
-We recommend downloading version 5.0.1, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
+We recommend downloading version 5.1.1, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
 
 
 
