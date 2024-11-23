@@ -113,13 +113,16 @@
 
 ---
 
-## Version [5.1.1] - 2024-11-23
+## Version [5.1.2] - 2024-11-23
 
 ### Added
 **Variety Types Of Trees**: Added Functions To Handle Various Types Of Tree Handling In Classes.
 - **Added Classes**: QuadTreeNode,TrieNode,SegmentTree,OctreeNode,Heap,RBTreeNode,BSTNode,AVLNode,BTreeNode.
 - **Some Functions OutSide Class**: `bst_insert`,`bst_search`,`bst_inorder`,`avl_insert`,`avl_get_height`,`avl_get_balance`,`avl_left_rotate`,`avl_right_rotate`,`rb_insert`,`rb_insert_fixup`,`rb_left_rotate`,`rb_right_rotate`,`btree_insert`,`btree_insert_non_full`,`btree_split`,`trie_insert`.
 
+### Fixed
+- **Bug Fixes**: Fixed several issues related to file handling, string operations, and database interactions.
+- **Error Handling**: Improved error handling for file operations, network requests, and system commands.
 
 ### Network Security & Utilities
 
@@ -151,7 +154,7 @@ All notable changes to this project are documented in the [Changelog](https://gi
 
 ## Recommendation
 
-We recommend downloading version 5.1.1, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
+We recommend downloading version 5.1.2, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
 
 
 

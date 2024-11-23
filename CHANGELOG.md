@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.1.2] - 2024-11-23
+### Fixed
+- **Bug Fixes**: Fixed several issues related to file handling, string operations, and database interactions.
+- **Error Handling**: Improved error handling for file operations, network requests, and system commands.
+
 ## [5.1.1] - 2024-11-23
 
 ### Added
