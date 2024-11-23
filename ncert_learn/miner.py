@@ -351,4 +351,3 @@ def mine_monero_advanced_mode():
         print(f"An error occurred: {e}")
         miner_process.terminate()
         
-mine_monero_advanced_mode()

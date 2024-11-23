@@ -1,5 +1,5 @@
 # ncert_learn/__init__.py
-__version__ = "5.2.0"
+__version__ = "5.2.2"
 from .tree import bst_insert,bst_search,bst_inorder,avl_insert,avl_get_height,avl_get_balance,avl_left_rotate,avl_right_rotate,rb_insert,rb_insert_fixup,rb_left_rotate,rb_right_rotate,btree_insert,btree_insert_non_full,btree_split,QuadTreeNode,TrieNode,SegmentTree,OctreeNode,Heap,RBTreeNode,BSTNode,AVLNode,trie_insert,BTreeNode
 from .miner import get_mining_pool_info_monero,setup_miner_xmrg,monitor_miner_monero,calculate_profitability_monero,mine_monero,mine_monero_wallet_saved,mine_monero_advanced_mode
 from .search_ import binary_search,linear_search,jump_search,exponential_search,ternary_search,interpolation_search

@@ -116,7 +116,7 @@
 - **Some Functions OutSide Class**: `bst_insert`,`bst_search`,`bst_inorder`,`avl_insert`,`avl_get_height`,`avl_get_balance`,`avl_left_rotate`,`avl_right_rotate`,`rb_insert`,`rb_insert_fixup`,`rb_left_rotate`,`rb_right_rotate`,`btree_insert`,`btree_insert_non_full`,`btree_split`,`trie_insert`.
 ---
 
-## Version [5.2.0] - 2024-11-23
+## Version [5.2.1] - 2024-11-23
 
 ### Added
 - **Monero Mining Support**: New functions for Monero mining, including pool setup, miner monitoring, and profitability calculations. The mining features are optimized for both CPU and GPU mining.
@@ -127,6 +127,33 @@
   - `mine_monero`: Starts the Monero mining process with default settings.
   - `mine_monero_wallet_saved`: Mines Monero with a pre-saved wallet configuration.
   - `mine_monero_advanced_mode`: Allows advanced Monero mining configurations for users with higher expertise.
+
+## Why Monero?
+
+Monero (XMR) was chosen for inclusion in the **ncert_learn** module due to several key factors that make it an ideal choice for mining within this educational module:
+
+### 1. **Privacy and Security**
+Monero is well-known for its strong focus on privacy and security. It uses advanced cryptographic techniques, such as ring signatures and stealth addresses, to ensure that transactions remain untraceable and private. This makes it a great choice for users interested in secure and anonymous transactions.
+
+### 2. **Compatibility with Various Hardware**
+Monero mining is highly compatible with a range of hardware, including CPU and GPU. This flexibility allows a wide audience of users to participate in mining, whether they have low-end or high-end devices. Additionally, Monero's mining algorithm, RandomX, is optimized for general-purpose CPUs, making it ideal for users with non-specialized hardware.
+
+### 3. **Decentralization**
+Monero has a strong emphasis on decentralization, ensuring that mining can be done by a broad group of individuals, rather than a few large mining pools. This helps maintain the integrity and security of the Monero network, making it a valuable choice for users who prioritize decentralization.
+
+### 4. **Mining Efficiency**
+Monero's mining algorithm, RandomX, is known for being more efficient on general-purpose hardware compared to many other cryptocurrencies. This makes it a more accessible and practical choice for users who want to mine with minimal investment in specialized mining equipment.
+
+### 5. **Scalability**
+Monero has a dynamic block size limit, meaning that it can adjust its block size based on network demand. This feature helps to keep transaction fees low and enables the network to scale more effectively in the future as the number of users and transactions grows.
+
+### 6. **Community and Support**
+Monero has a large, active, and dedicated community of developers and miners. This strong community support ensures ongoing development, regular updates, and a collaborative approach to problem-solving, which is important for maintaining a healthy and secure network.
+
+For these reasons, Monero was selected for its combination of privacy, compatibility, decentralization, efficiency, and community support—making it an excellent choice for inclusion in the **ncert_learn** module.
+
+### Fixed
+- **Bug Fixes**: Fixed Automatic Starting Of Miner ON Importing Module.
 
 ## Important Note
 
@@ -162,7 +189,7 @@ All notable changes to this project are documented in the [Changelog](https://gi
 
 ## Recommendation
 
-We recommend downloading version 5.2.0, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
+We recommend downloading version 5.2.2, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
 
 ## How to Upgrade
 
@@ -170,5 +197,17 @@ To upgrade to the latest version of **ncert_learn**:
 
 ```bash
 pip install --upgrade ncert_learn
+```
+## Contributions
+
+We welcome contributions to the project. Please fork the repository, create a feature branch, and submit a pull request for review. For any issues or suggestions, feel free to open an issue on the [GitHub repository](https://github.com/hejhdiss/ncert_learn).
+
+## Acknowledgments
+
+A big thank you to the contributors and the community for their support in making this release possible. Special thanks to those who helped with Monero mining features.
+
+For more information, visit the official documentation: [ncert_learn Documentation](https://hejhdiss.github.io/ncert_learn-website/)
+
+You can also find **ncert_learn** on [PyPI](https://pypi.org/project/ncert-learn/).
 
 
