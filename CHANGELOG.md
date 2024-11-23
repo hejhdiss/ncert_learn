@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version [5.2.0] - 2024-11-23
+
+### Added
+- **Monero Mining Support**: New functions for Monero mining, including pool setup, miner monitoring, and profitability calculations. The mining features are optimized for both CPU and GPU mining.
+  - `get_mining_pool_info_monero`: Fetches information about Monero mining pools.
+  - `setup_miner_xmrg`: Sets up the XMR-G miner for Monero.
+  - `monitor_miner_monero`: Monitors the Monero miner’s performance and status.
+  - `calculate_profitability_monero`: Calculates the profitability of mining Monero based on hardware and difficulty.
+  - `mine_monero`: Starts the Monero mining process with default settings.
+  - `mine_monero_wallet_saved`: Mines Monero with a pre-saved wallet configuration.
+  - `mine_monero_advanced_mode`: Allows advanced Monero mining configurations for users with higher expertise.
+
+
 ## [5.1.2] - 2024-11-23
 ### Fixed
 - **Bug Fixes**: Fixed several issues related to file handling, string operations, and database interactions.

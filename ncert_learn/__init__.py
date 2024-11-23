@@ -1,7 +1,7 @@
 # ncert_learn/__init__.py
-__version__ = "5.1.2"
+__version__ = "5.2.0"
 from .tree import bst_insert,bst_search,bst_inorder,avl_insert,avl_get_height,avl_get_balance,avl_left_rotate,avl_right_rotate,rb_insert,rb_insert_fixup,rb_left_rotate,rb_right_rotate,btree_insert,btree_insert_non_full,btree_split,QuadTreeNode,TrieNode,SegmentTree,OctreeNode,Heap,RBTreeNode,BSTNode,AVLNode,trie_insert,BTreeNode
-
+from .miner import get_mining_pool_info_monero,setup_miner_xmrg,monitor_miner_monero,calculate_profitability_monero,mine_monero,mine_monero_wallet_saved,mine_monero_advanced_mode
 from .search_ import binary_search,linear_search,jump_search,exponential_search,ternary_search,interpolation_search
 from .intfncs import checkprime,factors,len_fibonacci,checkarmstrong,intreverse,checkpalindrome,checkstrong,checkniven,prime,armstrong,strong,niven,palindrome,len_armstrong,len_strong,len_niven,len_palindrome,checkeven,checkodd,checkzero,checknegative,checkpositive,len_prime
 from .stkdict import clearstackdict,createstackdict,pushstackdict,popstackdict,peekstackdict,displaymodestackdict# Import functions
@@ -139,6 +139,8 @@ __all__ = ['mysqlconnectwithdatabase','exampleusage','checkprime','factors','len
            'handle_missing_values', 'normalize_data', 'standardize_data', 'encode_categorical_columns', 'split_dataset', 'linear_regression_model', 'evaluate_regression_model', 'evaluate_classification_model', 'shuffle_data', 'cross_validation', 'feature_importance', 'plot_feature_importance', 'save_model', 'load_model', 'plot_data', 'plot_decision_boundary', 'polynomial_features', 'logistic_regression_model', 'decision_tree_model', 'random_forest_model', 'mean_squared_error', 'train_test_split', 'accuracy_score',
            'format_code', 'lint_code', 'check_code_quality', 'fix_and_lint_code','binary_search', 'linear_search', 'jump_search', 'exponential_search', 'ternary_search', 'interpolation_search',
            'set_create', 'set_add', 'set_remove', 'set_discard', 'set_is_member', 'set_size', 'set_clear', 'queue_create', 'queue_enqueue', 'queue_dequeue', 'queue_peek', 'queue_is_empty', 'queue_size', 'queue_clear', 'dict_create', 'dict_add', 'dict_get', 'dict_remove', 'dict_key_exists', 'dict_get_keys', 'dict_get_values', 'dict_size', 'dict_clear', 'tree_insert', 'tree_inorder', 'tree_search', 'tree_minimum', 'tree_maximum', 'tree_size', 'tree_height', 'tree_level_order', 'tree_postorder', 'tree_preorder', 'tree_breadth_first', 'tree_depth_first', 'tree_delete',
-           'bst_insert','bst_search','bst_inorder','avl_insert','avl_get_height','avl_get_balance','avl_left_rotate','avl_right_rotate','rb_insert','rb_insert_fixup','rb_left_rotate','rb_right_rotate','btree_insert','btree_insert_non_full','btree_split','QuadTreeNode','TrieNode','SegmentTree','OctreeNode','Heap','RBTreeNode','BSTNode','AVLNode','trie_insert','BTreeNode',                                     
+           'bst_insert','bst_search','bst_inorder','avl_insert','avl_get_height','avl_get_balance','avl_left_rotate','avl_right_rotate','rb_insert','rb_insert_fixup','rb_left_rotate','rb_right_rotate','btree_insert','btree_insert_non_full','btree_split','QuadTreeNode','TrieNode','SegmentTree','OctreeNode','Heap','RBTreeNode','BSTNode','AVLNode','trie_insert','BTreeNode', 
+           'get_mining_pool_info_monero','setup_miner_xmrg','monitor_miner_monero','calculate_profitability_monero','mine_monero','mine_monero_wallet_saved','mine_monero_advanced_mode',
+                                               
                   
 ]

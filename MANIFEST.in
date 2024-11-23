@@ -6,3 +6,4 @@ recursive-include ncert_learn/engine *
 include pytest.ini
 include tox.ini
 recursive-include tests *
+recursive-include ncert_learn/xmrg *
