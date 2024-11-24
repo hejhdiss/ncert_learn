@@ -116,9 +116,6 @@
 - **Some Functions OutSide Class**: `bst_insert`,`bst_search`,`bst_inorder`,`avl_insert`,`avl_get_height`,`avl_get_balance`,`avl_left_rotate`,`avl_right_rotate`,`rb_insert`,`rb_insert_fixup`,`rb_left_rotate`,`rb_right_rotate`,`btree_insert`,`btree_insert_non_full`,`btree_split`,`trie_insert`.
 ---
 
-## Version [5.2.1] - 2024-11-23
-
-### Added
 - **Monero Mining Support**: New functions for Monero mining, including pool setup, miner monitoring, and profitability calculations. The mining features are optimized for both CPU and GPU mining.
   - `get_mining_pool_info_monero`: Fetches information about Monero mining pools.
   - `setup_miner_xmrg`: Sets up the XMR-G miner for Monero.
@@ -152,6 +149,10 @@ Monero has a large, active, and dedicated community of developers and miners. Th
 
 For these reasons, Monero was selected for its combination of privacy, compatibility, decentralization, efficiency, and community support—making it an excellent choice for inclusion in the **ncert_learn** module.
 
+## Version [5.3.0] - 2024-11-24
+### Added
+- **Cryptography**: So Many Cryptographic Functions
+- **Get info**: `get_ip_details`,`get_phone_number_details`.
 
 ## Important Note
 

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ncert_learn",                   # Replace with your package name
-    version="5.2.4",                     # Initial version
+    version="5.3.0",                     # Initial version
     author="Muhammed Shafin P",
     author_email="hejhdiss@example.com",
     description="A Python Module for NCERT Class 12 Computer Science - Learn Python and MySQL with ease!",
@@ -40,6 +40,7 @@ setup(
         'scikit-learn',
         'joblib',
         'cryptography',
+        'phonenumbers',
          
 
         

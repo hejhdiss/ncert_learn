@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version [5.3.0] - 2024-11-24
+### Added
+- **Cryptography**: So Many Cryptographic Functions
+- **Get info**: `get_ip_details`,`get_phone_number_details`.
+
 ## Version [5.2.3] - 2024-11-23
 ### Added
 - **GPU Mining**: Opencl and Cuda Support.
