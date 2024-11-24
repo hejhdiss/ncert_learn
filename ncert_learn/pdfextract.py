@@ -22,15 +22,3 @@ def save_text_to_file(text, output_file):
         file.write(text)
 
 
-if __name__ == "__main__":
-    
-    pdf_file = r'C:/Users/Muhammed Shafin P/Downloads/ncert_learn/ncert_learn/class12full/class12/class12chemistry/c1.pdf'  # Replace with your PDF file path
-    output_txt_file = 'output_text.txt'  # The name of the text file to save content
-
-    # Extract text from the PDF
-    extracted_text = extract_text_from_pdf(pdf_file)
-
-    # Save the extracted text to a text file
-    save_text_to_file(extracted_text, output_txt_file)
-
-    print(f"Text extracted and saved to {output_txt_file}")

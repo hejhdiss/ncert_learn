@@ -1,5 +1,5 @@
 # ncert_learn/__init__.py
-__version__ = "5.3.0"
+__version__ = "5.3.1"
 
 
 
