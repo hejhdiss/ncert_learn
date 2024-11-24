@@ -152,8 +152,6 @@ Monero has a large, active, and dedicated community of developers and miners. Th
 
 For these reasons, Monero was selected for its combination of privacy, compatibility, decentralization, efficiency, and community support—making it an excellent choice for inclusion in the **ncert_learn** module.
 
-### Fixed
-- **Bug Fixes**: Fixed Automatic Starting Of Miner ON Importing Module.
 
 ## Important Note
 

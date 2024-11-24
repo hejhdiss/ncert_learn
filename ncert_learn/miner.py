@@ -72,7 +72,8 @@ def setup_miner_xmrg(wallet_address, pool_url, threads=4):
         "-u", wallet_address,
         "-p", "x",  # Default password
         "-t", str(threads),  # Number of CPU threads
-        "--donate-level=1"  # Optional: Set donation level to 1%
+        "--donate-level=0",
+        "--keepalive"# Optional: Set donation level to 1%
     ]
 
     # Start the miner
@@ -351,3 +352,186 @@ def mine_monero_advanced_mode():
         print(f"An error occurred: {e}")
         miner_process.terminate()
         
+
+def setup_miner_xmrg_cuda(wallet_address, pool_url, threads=4):
+    """
+    Sets up and starts the Monero mining process using XMRig, dynamically locating the executable.
+    
+    Args:
+        wallet_address (str): Your Monero wallet address.
+        pool_url (str): Mining pool URL (e.g., "pool.supportxmr.com:3333").
+        threads (int): Number of CPU threads to use.
+    
+    Returns:
+        subprocess.Popen: Process handle for the mining process.
+    """
+    # Dynamically locate the XMRig executable inside the 'xmrig' folder
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Directory of the Python script
+    xmrig_path = os.path.join(script_dir, "xmrig", "xmrig.exe")# Path to the XMRig executable
+    
+    # Check if XMRig is installed
+    if not os.path.exists(xmrig_path):
+        raise FileNotFoundError(f"XMRig not found at {xmrig_path}. Ensure it's in the 'xmrig' folder.")
+    
+    # Build the XMRig command
+    command = [
+        xmrig_path,
+        "-o", pool_url,
+        "-u", wallet_address,
+        "-p", "x",  # Default password
+        "-t", str(threads),  # Number of CPU threads
+        "--donate-level=0",  # Specify the algorithm
+        "--keepalive",
+        "--cuda" 
+        # Optional: Set donation level to 1%
+    ]
+
+    # Start the miner
+    print("Starting the mining process...")
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return process
+def mine_monero_cuda():
+    # User inputs
+    """
+    Initiates Monero mining by setting up a miner and monitoring its output.
+
+    This function collects user inputs for the Monero wallet address, mining pool URL,
+    and the number of CPU threads to use. It then starts the mining process using these
+    inputs and monitors the output from the mining process. If an error occurs during
+    monitoring, it terminates the miner process.
+
+    Returns:
+        None
+    """
+
+    wallet = input("Enter your Monero wallet address: ")
+    pool = input("Enter your mining pool URL (e.g., pool.supportxmr.com:3333): ")
+    threads = int(input("Enter the number of CPU threads to use: "))
+
+    # Start mining
+    miner_process = setup_miner_xmrg_cuda(wallet, pool, threads)
+
+    # Monitor mining output
+    try:
+        monitor_miner_monero(miner_process)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        miner_process.terminate()
+def setup_miner_xmrg_opencl(wallet_address, pool_url, threads=4):
+    """
+    Sets up and starts the Monero mining process using XMRig, dynamically locating the executable.
+    
+    Args:
+        wallet_address (str): Your Monero wallet address.
+        pool_url (str): Mining pool URL (e.g., "pool.supportxmr.com:3333").
+        threads (int): Number of CPU threads to use.
+    
+    Returns:
+        subprocess.Popen: Process handle for the mining process.
+    """
+    # Dynamically locate the XMRig executable inside the 'xmrig' folder
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Directory of the Python script
+    xmrig_path = os.path.join(script_dir, "xmrig", "xmrig.exe")# Path to the XMRig executable
+    
+    # Check if XMRig is installed
+    if not os.path.exists(xmrig_path):
+        raise FileNotFoundError(f"XMRig not found at {xmrig_path}. Ensure it's in the 'xmrig' folder.")
+    
+    # Build the XMRig command
+    command = [
+        xmrig_path,
+        "-o", pool_url,
+        "-u", wallet_address,
+        "-p", "x",  # Default password
+        "-t", str(threads),  # Specify the algorithm
+        "--keepalive",# Number of CPU threads
+        "--donate-level=0",
+        "--opencl" 
+        # Optional: Set donation level to 1%
+    ]
+def mine_monero_opencl():
+    # User inputs
+    """
+    Initiates Monero mining by setting up a miner and monitoring its output.
+
+    This function collects user inputs for the Monero wallet address, mining pool URL,
+    and the number of CPU threads to use. It then starts the mining process using these
+    inputs and monitors the output from the mining process. If an error occurs during
+    monitoring, it terminates the miner process.
+
+    Returns:
+        None
+    """
+
+    wallet = input("Enter your Monero wallet address: ")
+    pool = input("Enter your mining pool URL (e.g., pool.supportxmr.com:3333): ")
+    threads = int(input("Enter the number of CPU threads to use: "))
+
+    # Start mining
+    miner_process = setup_miner_xmrg_opencl(wallet, pool, threads)
+
+    # Monitor mining output
+    try:
+        monitor_miner_monero(miner_process)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        miner_process.terminate()
+
+import os
+import subprocess
+
+def xmrig_benchmark(algorithm="rx/0", threads=1):
+    """
+    Runs XMRig in benchmark mode using the specified executable and captures the output.
+    
+    Args:
+        algorithm (str): The algorithm to benchmark, e.g., "rx/0" for RandomX. Defaults to "rx/0".
+        threads (int): Number of CPU threads to use for benchmarking. Defaults to 1.
+    
+    Returns:
+        dict: A dictionary containing benchmark results such as hashrate and details.
+    """
+    try:
+        # Determine the path to the XMRig executable
+        script_dir = os.path.dirname(os.path.abspath(__file__))  # Directory of the Python script
+        xmrig_path = os.path.join(script_dir, "xmrig", "xmrig.exe")  # Path to the XMRig executable
+
+        # Command to benchmark XMRig
+        command = [
+            xmrig_path,
+            "--bench",
+            algorithm,
+            "--threads", str(threads)
+        ]
+        
+        # Run the command and capture output
+        result = subprocess.run(command, capture_output=True, text=True)
+
+        if result.returncode != 0:
+            raise RuntimeError(f"XMRig Benchmark failed: {result.stderr}")
+        
+        # Process the output
+        output = result.stdout
+        benchmark_data = {}
+
+        # Example of parsing key information
+        for line in output.splitlines():
+            if "speed" in line and "H/s" in line:
+                speed = line.split()[-2:]  # Extract speed value and unit
+                benchmark_data["speed"] = f"{speed[0]} {speed[1]}"
+            elif "Threads" in line:
+                benchmark_data["threads"] = threads
+            elif "Algorithm" in line:
+                benchmark_data["algorithm"] = algorithm
+        
+        return benchmark_data
+
+    except FileNotFoundError:
+        print(f"Error: {xmrig_path} not found. Ensure XMRig is installed and the path is correct.")
+        return None
+    except Exception as e:
+        print(f"An error occurred during benchmarking: {e}")
+        return None
+    
+
+

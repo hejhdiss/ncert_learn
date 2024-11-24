@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 
 ## Version [5.2.3] - 2024-11-23
+### Added
+- **GPU Mining**: Opencl and Cuda Support.
+
+## Version [5.2.3] - 2024-11-23
 ### Fixed
 - **Bug Fixes**: Fixed File Not Found In Miner.
 
