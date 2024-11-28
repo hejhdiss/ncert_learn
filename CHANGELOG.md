@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version [5.3.5] - 2024-11-28
+### Fixed
+- **Dependency Problem**: Added bcrypt in Dependency.
+
 ## Version [5.3.0] - 2024-11-24
 ### Added
 - **Cryptography**: So Many Cryptographic Functions
@@ -21,7 +25,6 @@ All notable changes to this project will be documented in this file.
 
 
 ## Version [5.2.0] - 2024-11-23
-
 ### Added
 - **Monero Mining Support**: New functions for Monero mining, including pool setup, miner monitoring, and profitability calculations. The mining features are optimized for both CPU and GPU mining.
   - `get_mining_pool_info_monero`: Fetches information about Monero mining pools.
