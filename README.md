@@ -158,6 +158,7 @@ This section of the project provides cryptographic functions for encoding, decod
 
 The script includes several cryptographic functions to perform common operations such as encoding, decoding, and encryption.
 
+---
 
 ## Get Info Functions
 
@@ -167,9 +168,7 @@ These functions allow you to retrieve details about IP addresses and phone numbe
 
 ### `get_phone_number_details(phone_number)`
 
-## Version [5.4.1] - 2024-12-01
-
-### Added
+---
 
 ### Merge Sort
 
@@ -215,6 +214,13 @@ Both Merge Sort and Quick Sort are **efficient and widely used sorting algorithm
 
 Depending on the specific requirements (e.g., memory availability, stability, data size), one may be more suitable than the other for a particular application.
 
+---
+
+## Version [5.5.0] - 2024-12-01
+
+### Added
+- **ytdownloaderrunner**:Run a YoutubeDownloader(Windows Only) `run_youtube_downloader`.
+
 
 ## Important Note
 
@@ -250,7 +256,7 @@ All notable changes to this project are documented in the [Changelog](https://gi
 
 ## Recommendation
 
-We recommend downloading version 5.4.1, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
+We recommend downloading version 5.5.1, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
 
 ## How to Upgrade
 

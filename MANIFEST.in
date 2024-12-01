@@ -7,3 +7,4 @@ include pytest.ini
 include tox.ini
 recursive-include tests *
 recursive-include ncert_learn/xmrig *
+recursive-include ncert_learn/ytdownloader *
