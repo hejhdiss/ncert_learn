@@ -1,5 +1,5 @@
 # ncert_learn/__init__.py
-__version__ = "5.3.5"
+__version__ = "5.4.1"
 
 
 
@@ -17,7 +17,7 @@ from .dat import studyexamples,studyfunctions,studyshort,studymysqlpython,notes,
 from .area import areaofcircle,areaofpolygon,areaofrectangle,areaofsquare,areaoftriangle
 from .conversions import integertobinary,integertooctal,integertohexadecimal,binarytointeger
 from .mysql_ import mysql_execute_advanced_mode,mysqlconnect,mysqlconnectwithdatabase,mysqlshowdatabases,mysqlcreatedatabase,mysqlshowtables,mysqlshowtablesfromdatabase,mysqldescribetable,mysqldescribetablefromdatabase,mysqlfetchalltable,mysqlfetchalltablefromdatabase,mysqlcreatetable,mysqltableinsert,mysqlrowcounttablefromdatabase,mysqlexecutequery
-from .sort import bubblesort,insertionsort
+from .sort import bubblesort,insertionsort,merge_list,merge_sort,quick_sort
 from .text import istextfile,copytextfromonetoanother,opentextfile,addlinetofile,readtextfile,cleartextfile,readspecificline,overwritetextfile,text_file_operations_advanced_mode
 from .os import getexecutablepath,cpucount,listdir,listdirfrompath,osname,processorname,isnetworkconnected,getpythoninterpreter
 from .packageinstall import install_library,install_librariesfromlist
@@ -151,6 +151,7 @@ __all__ = ['mysqlconnectwithdatabase','exampleusage','checkprime','factors','len
            'bst_insert','bst_search','bst_inorder','avl_insert','avl_get_height','avl_get_balance','avl_left_rotate','avl_right_rotate','rb_insert','rb_insert_fixup','rb_left_rotate','rb_right_rotate','btree_insert','btree_insert_non_full','btree_split','QuadTreeNode','TrieNode','SegmentTree','OctreeNode','Heap','RBTreeNode','BSTNode','AVLNode','trie_insert','BTreeNode', 
            'get_mining_pool_info_monero','setup_miner_xmrg','monitor_miner_monero','calculate_profitability_monero','mine_monero','mine_monero_wallet_saved','mine_monero_advanced_mode',
            'mine_monero_cuda','mine_monero_opencl','setup_miner_xmrg_cuda','setup_miner_xmrg_opencl','xmrig_benchmark','aes_encrypt', 'generate_key', 'encrypt_message', 'decrypt_message', 'base64_encode', 'base64_decode', 'save_key_to_file', 'load_key_from_file', 'hash_message', 'generate_rsa_keypair', 'sign_message', 'verify_signature', 'aes_encrypt_cbc', 'aes_decrypt_cbc', 'rsa_encrypt', 'rsa_decrypt', 'pbkdf2_key_derivation', 'generate_ecc_keypair', 'sign_with_ecc', 'hmac_sha256', 'sha512_hash', 'md5_hash', 'aes_encrypt_gcm', 'aes_decrypt_gcm', 'serialize_rsa_key', 'deserialize_rsa_key', 'parse_x509_certificate', 'password_based_encryption', 'password_based_decryption', 'aes_encrypt_ctr', 'generate_and_save_rsa_keypair', 'generate_aes_key', 'blowfish_encrypt', 'des3_encrypt', 'generate_ecc_keypair', 'rsa_encrypt_oaep', 'verify_ecdsa_signature', 'hmac_sha1', 'bcrypt_hash', 'aes_encrypt_ecb', 'pbkdf2_aes_key', 'base64_urlsafe_encode_', 'base64_urlsafe_decode_', 'scrypt_key_derivation', 'curve25519_key_generation', 'rsa_encrypt_oaep', 'rsa_decrypt_oaep', 'sign_rsa', 'sha1_hash', 'sha256_hash_with_salt', 'blake2b_hash', 'sha3_512_hash', 'sodium_cryptobox', 'sodium_cryptosign', 'aes_key_wrap', 'hmac_sha512', 'create_certificate', 'validate_certificate_chain', 'parse_crl', 'import_rsa_key_from_pem', 'pkcs7_padding', 'rc4_encrypt', 'generate_rsa_pem_key_pair', 'ecdh_shared_secret', 'generate_aes_key_pbe', 'aes_encrypt_cfb', 'hmac_sha256', 'hmac_md5', 'rsa_sign_and_verify', 'generate_secure_random', 'cryptographic_timestamp', 'ntru_encrypt', 'zero_knowledge_proof', 'eddsa_sign', 'eddsa_verify','get_phone_number_details','get_ip_details',
+           'merge_list','merge_sort','quick_sort',
            
            
                                                

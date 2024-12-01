@@ -53,6 +53,83 @@ def insertionsort(a):
                 else:
                     break
         return a
+def merge_sort(a):
+    """Merge Sort Algorithm for sorting a list of numbers in ascending order.
+
+    It recursively divides the list into two halves, sorts each half, and then merges the sorted halves.
+    The time complexity of this algorithm is O(n log n), making it more efficient than Bubble Sort.
+
+    Parameters:
+    a (list): the list of numbers to be sorted
+
+    Returns:
+    list: the sorted list in ascending order
+    """
+    if len(a) <= 1:
+        return a
+    mid = len(a) // 2
+    left = merge_sort(a[:mid])
+    right = merge_sort(a[mid:])
+    
+    return merge_list(left, right)
+
+def merge_list(left, right):
+    
+
+    """
+    Merges two sorted lists into a single sorted list.
+
+    This function takes two sorted lists, `left` and `right`, and merges them
+    into a new sorted list. It iterates through both lists, comparing elements
+    and appending the smaller element to the result list. Once one of the lists
+    is exhausted, the remaining elements from the other list are appended to
+    the result.
+
+    Parameters:
+    left (list): The first sorted list.
+    right (list): The second sorted list.
+
+    Returns:
+    list: A new list containing all elements from `left` and `right`, sorted in
+    ascending order.
+    """
+
+    result = []
+    i = j = 0
+    
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    
+    result.extend(left[i:])
+    result.extend(right[j:])
+    
+    return result
+
+def quick_sort(a):
+    """Quick Sort Algorithm for sorting a list of numbers in ascending order.
+
+    It selects a pivot element, partitions the list around the pivot, and recursively sorts the sublists.
+    The time complexity of this algorithm is O(n log n) on average.
+
+    Parameters:
+    a (list): the list of numbers to be sorted
+
+    Returns:
+    list: the sorted list in ascending order
+    """
+    if len(a) <= 1:
+        return a
+    pivot = a[len(a) // 2]
+    left = [x for x in a if x < pivot]
+    middle = [x for x in a if x == pivot]
+    right = [x for x in a if x > pivot]
+    
+    return quick_sort(left) + middle + quick_sort(right)
 
 
 

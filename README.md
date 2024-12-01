@@ -149,10 +149,72 @@ Monero has a large, active, and dedicated community of developers and miners. Th
 
 For these reasons, Monero was selected for its combination of privacy, compatibility, decentralization, efficiency, and community support—making it an excellent choice for inclusion in the **ncert_learn** module.
 
-## Version [5.3.0] - 2024-11-24
+
+# Cryptographic Functions and Information Retrieval Utilities
+
+This section of the project provides cryptographic functions for encoding, decoding, and encryption, as well as utilities to fetch details about IP addresses and phone numbers.
+
+## Cryptographic Functions
+
+The script includes several cryptographic functions to perform common operations such as encoding, decoding, and encryption.
+
+
+## Get Info Functions
+
+These functions allow you to retrieve details about IP addresses and phone numbers.
+
+### `get_ip_details(ip)`
+
+### `get_phone_number_details(phone_number)`
+
+## Version [5.4.1] - 2024-12-01
+
 ### Added
-- **Cryptography**: So Many Cryptographic Functions
-- **Get info**: `get_ip_details`,`get_phone_number_details`.
+
+### Merge Sort
+
+Merge Sort is a classic **divide-and-conquer** sorting algorithm that works by recursively dividing the input list into two halves until each sublist contains a single element or is empty. Once the sublists are individual or empty, they are merged back together in sorted order. This merging step ensures that the final list is sorted in a highly efficient manner.
+
+- **Time Complexity**: O(n log n) in all cases (best, average, and worst). This consistent time complexity makes Merge Sort highly reliable for large datasets and ensures predictable performance.
+- **Space Complexity**: O(n) due to the additional memory required for storing the temporary sublists during the merge process.
+
+Merge Sort is particularly advantageous when dealing with **large datasets** or when a stable sort (where elements with equal values maintain their original relative order) is required. However, it does require additional memory, which can be a limitation in memory-constrained environments. Merge Sort is also one of the **recommended algorithms** for sorting linked lists because it does not require random access to elements, unlike other sorting algorithms such as Quick Sort.
+
+#### Use Case:
+Merge Sort is optimal for external sorting, such as when data exceeds the available memory and is stored in external devices (like hard drives or databases), because it efficiently handles data that doesn’t fit entirely into memory at once.
+
+### Quick Sort
+
+Quick Sort is another **divide-and-conquer** algorithm but operates differently. It works by selecting a **pivot** element, then partitioning the list such that elements smaller than the pivot go to the left, and those greater go to the right. This partitioning step ensures that the pivot is placed in its correct sorted position. The sublists (left and right of the pivot) are then recursively sorted.
+
+- **Time Complexity**: O(n log n) on average, but can degrade to O(n²) if the pivot selection is poor (for example, when the smallest or largest element is consistently chosen as the pivot).
+- **Space Complexity**: O(log n) for the recursive stack in the average case. However, in the worst case (when the pivot is poorly chosen), the space complexity can degrade to O(n).
+
+Quick Sort is generally faster than Merge Sort for most practical datasets, especially when implemented with a good pivot selection strategy (e.g., random pivot or median-of-three). It is a highly efficient algorithm for **in-memory sorting** due to its low overhead. However, its worst-case performance can be a drawback when sorting already sorted or nearly sorted data.
+
+#### Advantages:
+- Faster in practice than Merge Sort for most datasets.
+- **In-place sorting**: Unlike Merge Sort, Quick Sort does not require additional memory for storing sublists, making it more memory efficient in terms of space.
+
+#### Disadvantages:
+- Worst-case time complexity can degrade to O(n²) when pivot selection is poor.
+- Not a stable sort, meaning equal elements may not maintain their relative order.
+
+#### Optimizations:
+To avoid the worst-case time complexity, modern implementations of Quick Sort use techniques such as **randomized pivoting** or **median-of-three pivot selection** to improve performance on average.
+
+#### Use Case:
+Quick Sort is generally preferred when sorting data that fits in memory and when average performance is critical. It is a great option for **sorting arrays or lists** where speed is crucial and space overhead is a concern.
+
+### Conclusion
+
+Both Merge Sort and Quick Sort are **efficient and widely used sorting algorithms**, each with its unique advantages and trade-offs. 
+
+- **Merge Sort** is optimal for large datasets and guarantees consistent performance, making it suitable for scenarios like external sorting.
+- **Quick Sort**, although subject to worst-case scenarios, is often the go-to choice for fast, in-memory sorting due to its lower space complexity and faster average-case performance.
+
+Depending on the specific requirements (e.g., memory availability, stability, data size), one may be more suitable than the other for a particular application.
+
 
 ## Important Note
 
@@ -188,7 +250,7 @@ All notable changes to this project are documented in the [Changelog](https://gi
 
 ## Recommendation
 
-We recommend downloading version 5.2.3, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
+We recommend downloading version 5.4.1, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
 
 ## How to Upgrade
 
