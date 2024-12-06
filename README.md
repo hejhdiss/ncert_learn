@@ -256,7 +256,7 @@ All notable changes to this project are documented in the [Changelog](https://gi
 
 ## Recommendation
 
-We recommend downloading version 5.5.1, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
+We recommend downloading version 5.5.4, as it includes important bug fixes and new features that enhance performance, usability, and stability. Upgrade today for an improved experience.
 
 ## How to Upgrade
 

@@ -159,6 +159,52 @@ def readcsvspecificline(line_number):
             return rows[line_number - 1]
     except (FileNotFoundError, csv.Error, IndexError):
         return False
+import csv
+
+def modifycsvspecificline(line_number, new_content):
+    """
+    Modifies a specific line in the CSV file opened by opencsvfile() function.
+
+    Parameters
+    ----------
+    line_number : int
+        The line number to modify (1-based index).
+    new_content : list
+        The new content to replace the specified line with (as a list of values).
+
+    Returns
+    -------
+    bool
+        True if the line was successfully modified, False if the file is not found, line number is out of range, or any other exception occurs.
+    """
+    global current_csv_path
+
+    try:
+        # Read the current content of the CSV file
+        with open(current_csv_path, 'r', newline='', encoding='utf-8') as file:
+            reader = csv.reader(file)
+            rows = list(reader)
+
+        # Check if the line number is within the valid range
+        if line_number <= 0 or line_number > len(rows):
+            return False
+
+        # Modify the specified line
+        rows[line_number - 1] = new_content  # Replace the line with the new content
+
+        # Write the modified content back to the CSV file
+        with open(current_csv_path, 'w', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            writer.writerows(rows)
+
+        return True
+    except (FileNotFoundError, csv.Error, IndexError):
+        return False
+    except Exception:
+        return False
+
+
+
 
 
 # Initialize current CSV path variable

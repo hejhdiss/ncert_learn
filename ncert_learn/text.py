@@ -101,7 +101,7 @@ def opentextfile(a):
             return False
         else:
             return True
-def addlinetofile(a):
+def addlinetotextfile(a):
 
     """
     Appends a line of text to the file opened by opentextfile() function.
@@ -168,7 +168,7 @@ def cleartextfile():
         pass
 
 
-def readspecificline( line_number):
+def readspecificlinetextfile( line_number):
 
     """
     Reads a specific line from the file opened by opentextfile() function.
@@ -207,6 +207,46 @@ def readspecificline( line_number):
         return False
     except Exception as e:
         return False
+def modifyspecificlinetextfile(line_number, new_content):
+    """
+    Modifies a specific line in the file opened by opentextfile() function.
+
+    Parameters
+    ----------
+    line_number : int
+        The line number to modify (1-based index).
+    new_content : str
+        The new content to replace the specified line with.
+
+    Returns
+    -------
+    bool
+        True if the line was successfully modified, False if the file is not found, line number is out of range, or any other exception occurs.
+    """
+    global path
+
+    try:
+        # Open the file in read mode
+        with open(path, "r") as file:
+            lines = file.readlines()
+
+        # Check if the line number is within the valid range
+        if line_number <= 0 or line_number > len(lines):
+            return False
+
+        # Modify the specified line
+        lines[line_number - 1] = new_content + '\n'  # Ensure the line ends with a newline character
+
+        # Write the modified lines back to the file
+        with open(path, "w") as file:
+            file.writelines(lines)
+
+        return True
+    except (FileNotFoundError, IOError,EOFError):
+        return False
+    except Exception as e:
+        return False
+
 def overwritetextfile(new_content):
     """
     Overwrites the contents of the currently opened text file with new content.

@@ -123,6 +123,42 @@ def clearbinaryfile():
     if current_binary_path:
         with open(current_binary_path, 'wb') as file:
             pass  # Overwrite with an empty file
+def modifyspecificlinebinary(line_number, new_content):
+    """
+    Modifies a specific line in the text file.
+
+    Parameters
+    ----------
+    line_number : int
+        The line number to modify (1-based index).
+    new_content : str
+        The new content to set for the specified line.
+
+    Returns
+    -------
+    bool
+        True if the line was successfully modified, False if there was an error (e.g., file not found or invalid line number).
+    """
+    global current_text_path
+
+    try:
+        with open(current_text_path, 'r') as file:
+            lines = file.readlines()
+
+        # Check if the line number is valid
+        if line_number <= 0 or line_number > len(lines):
+            return False
+
+        # Modify the specified line
+        lines[line_number - 1] = new_content + '\n'
+
+        # Write the modified content back to the file
+        with open(current_text_path, 'w') as file:
+            file.writelines(lines)
+
+        return True
+    except (FileNotFoundError, IOError, IndexError):
+        return False
 
 
 def readbinaryspecificchunk(offset, size):
