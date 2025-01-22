@@ -216,10 +216,10 @@ Depending on the specific requirements (e.g., memory availability, stability, da
 
 ---
 
-## Version [5.5.0] - 2024-12-01
+## Version [5.5.5] - 2025-01-22
 
-### Added
-- **ytdownloaderrunner**:Run a YoutubeDownloader(Windows Only) `run_youtube_downloader`.
+### Updated
+- **ytdownloaderrunner**:Updated YoutubeDownloader(Windows Only) `run_youtube_downloader`.
 
 
 ## Important Note

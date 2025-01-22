@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version [5.5.5] - 2024-01-22
+
+### Updated
+- **ytdownloaderrunner**:Updated YoutubeDownloader(Windows Only) `run_youtube_downloader`.
+
 ## Version [5.5.0] - 2024-12-01
 
 ### Added

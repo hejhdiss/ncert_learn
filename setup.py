@@ -2,13 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name="ncert_learn",                   # Replace with your package name
-    version="5.5.4",                     # Initial version
+    version="5.5.5",                     # Initial version
     author="Muhammed Shafin P",
     author_email="hejhdiss@example.com",
     description="A Python Module for NCERT Class 12 Computer Science - Learn Python and MySQL with ease!",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     packages=find_packages(),
+    doc_url="https://hejhdiss.github.io/ncert_learn-website/",
     url="https://github.com/hejhdiss/ncert_learn",  # Add your GitHub repository URL here
     project_urls={
         "Bug Tracker": "https://github.com/hejhdiss/ncert_learn/issues",
