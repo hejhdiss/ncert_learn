@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+recursive-include ncert_learn/sqlmap *
+include CHANGELOG.md
+recursive-include ncert_learn/engine *
+include pytest.ini
+include tox.ini
+recursive-include tests *
+recursive-include ncert_learn/xmrig *
+recursive-include ncert_learn/ytdownloader *
